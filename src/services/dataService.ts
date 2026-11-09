@@ -1,0 +1,13 @@
+import { regions } from '../data/regions';
+import { villages } from '../data/villages';
+import { demoAssessments } from '../data/demo';
+import type { DataMode, VillageAssessment } from '../types';
+export const getRegions=()=>regions;
+export const getVillages=(regionId='lebanon')=>regionId==='lebanon'?villages:[];
+export const getVillageDetails=(villageId:string)=>villages.find(v=>v.id===villageId)??null;
+export const getPopulationData=(id:string,mode:DataMode):VillageAssessment|null=>mode==='demo'?demoAssessments[id]??null:null;
+export const getDisplacementData=getPopulationData;
+export const getDamageAssessment=getPopulationData;
+export const getNighttimeLights=(id:string,mode:DataMode)=>getPopulationData(id,mode)?.nightlights??[];
+export const getImageryDates=(_villageId:string)=>[] as {before:string;after:string;source:string;beforeUrl:string;afterUrl:string}[];
+export const getAssessment=(id:string,mode:DataMode)=>getPopulationData(id,mode);

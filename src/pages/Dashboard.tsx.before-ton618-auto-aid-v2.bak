@@ -1,0 +1,190 @@
+import EvidenceAidCalculator from '../components/calculator/EvidenceAidCalculator';
+import UnifiedIntelligencePanel from '../components/dashboard/UnifiedIntelligencePanel';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowLeft, ArrowLeftRight, BookOpen, Building2, Globe2, Layers3, Satellite, ShieldCheck, Users, Waves, Map, MoonStar } from 'lucide-react';
+import IntelligenceMap from '../components/map/IntelligenceMap';
+import AidPriorityCard from '../components/dashboard/AidPriorityCard';
+import { nationalDistrictMovements } from '../data/nationalDistrictMovement';
+import EvidenceExplorer from '../components/dashboard/EvidenceExplorer';
+import CalculatorModal from '../components/calculator/CalculatorModal';
+import ComparisonModal from '../components/comparison/ComparisonModal';
+import NightlightsModal from '../components/nightlights/NightlightsModal';
+import { villages, STUDY_AREA_IDS } from '../data/villages';
+import VillageFirmsEvidence from '../components/firms/VillageFirmsEvidence';
+import { auditIomBoundaries, featureContainsPoint, getFeatureCode, getFeatureName, loadLebanonIomLayers, safeIomMetrics } from '../lib/ton618Iom';
+import type { GeoFeature } from '../lib/ton618Iom';
+import { getParentDistrictCode } from '../lib/districtDrilldown';
+import { type GeographyLevel, studyDistricts, districtForVillage, iom, undp } from '../data/officialEvidence';
+import { getAssessment } from '../services/dataService';
+import { useMode } from '../App';
+import type { LayerId, Village } from '../types';
+
+export default function Dashboard() {
+  const { mode } = useMode();
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash !== '#aid-planner') return;
+    const raf = window.requestAnimationFrame(() => document.getElementById('aid-planner')?.scrollIntoView({block:'nearest',behavior:'auto'}));
+    return () => window.cancelAnimationFrame(raf);
+  }, [location.hash]);
+  const [geographyLevel,setGeographyLevel]=useState<GeographyLevel>('district');
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedCadastre,setSelectedCadastre]=useState<GeoFeature|null>(null);
+  const [iomLayers,setIomLayers]=useState<Awaited<ReturnType<typeof loadLebanonIomLayers>>|null>(null);
+  const [iomLoadError,setIomLoadError]=useState<string|null>(null);
+  useEffect(()=>{
+    let live=true;
+    loadLebanonIomLayers().then(loaded=>{
+      if(!live)return;
+      setIomLayers(loaded);
+      const audit=auditIomBoundaries(loaded.iom,loaded.districts,loaded.villages);
+      console.info('TON618 IOM nationwide coverage',audit);
+      if(audit.ambiguousAdm3Codes.length||audit.missingAdm3Code.length)console.warn('ADM3 code review required; run npm run audit:iom',audit);
+    }).catch(err=>{if(live)setIomLoadError(err instanceof Error?err.message:String(err));});
+    return ()=>{live=false;};
+  },[]);
+  const [selectedDistrictId,setSelectedDistrictId]=useState<string | null>(null);
+  const [selectedMapCenter,setSelectedMapCenter]=useState<[number,number]|null>(null);
+  const [resetMapToken,setResetMapToken]=useState(0);
+  const [layer, setLayer] = useState<LayerId>('population');
+  const [calculatorOpen, setCalculatorOpen] = useState(false);
+  const [comparisonOpen, setComparisonOpen] = useState(false);
+  const [nightOpen, setNightOpen] = useState(false);
+  const selected: Village | null = villages.find(v => v.id === selectedId) ?? null;
+  const selectedDistrict = nationalDistrictMovements.find(d=>d.district===selectedDistrictId) ?? null;
+  const selectedStudyDistrict = studyDistricts.find(d=>d.sourceDistrict===selectedDistrictId) ?? null;
+  const currentDistrict = selectedStudyDistrict ?? studyDistricts[0];
+  const ambiguousCodes = useMemo(()=>new Set(iomLayers?auditIomBoundaries(iomLayers.iom,iomLayers.districts,iomLayers.villages).ambiguousAdm3Codes:[]),[iomLayers]);
+  const districtGeoFeature=iomLayers&&selectedDistrictId?iomLayers.districts.features.find(feature=>iomLayers.iom.districts_by_pcode[getFeatureCode(feature,'district')]?.district===selectedDistrictId):null;
+  const selectedIomMetrics=iomLayers?(geographyLevel==='district'&&districtGeoFeature?safeIomMetrics(districtGeoFeature,'district',iomLayers.iom,ambiguousCodes):geographyLevel==='village'&&selectedCadastre?safeIomMetrics(selectedCadastre,'village',iomLayers.iom,ambiguousCodes):null):null;
+  const cadastreLabel=selectedCadastre?getFeatureName(selectedCadastre,'village'):null;
+  const data = selected ? getAssessment(selected.id, mode) : null;
+  const comparisonFocus = geographyLevel==='village' && selected
+    ? selected
+    : geographyLevel==='village' && selectedCadastre && selectedMapCenter
+      ? {id:getFeatureCode(selectedCadastre,'village'),name:cadastreLabel??'Cadastral area',coordinates:selectedMapCenter}
+    : selectedDistrict && selectedMapCenter
+      ? {id:selectedDistrict.district,name:`${selectedDistrict.district} District`,coordinates:selectedMapCenter}
+      : {id:currentDistrict.id,name:`${currentDistrict.name} District`,coordinates:currentDistrict.center};
+
+  function selectVillage(v:Village){
+    setSelectedId(v.id);
+    if (iomLayers) {
+      const area=iomLayers.villages.features.find(f=>featureContainsPoint(f,v.coordinates));
+      if (area) {
+        setSelectedCadastre(area);
+        const parent=iomLayers.iom.districts_by_pcode[getParentDistrictCode(area)];
+        if(parent) setSelectedDistrictId(parent.district);
+      }
+      setSelectedMapCenter(v.coordinates);
+    }
+    const district=districtForVillage(v.id);
+    if(district) setSelectedDistrictId(district.sourceDistrict);
+    setGeographyLevel('village');
+  }
+  function selectCadastre(feature:GeoFeature,center:[number,number]) {
+    // The map only passes features belonging to the currently open district.
+    setSelectedCadastre(feature);
+    setSelectedMapCenter(center);
+    const study=STUDY_AREA_IDS.map(id=>villages.find(v=>v.id===id)).find(v=>v&&featureContainsPoint(feature,v.coordinates));
+    setSelectedId(study?.id??null);
+    const parentName=iomLayers?.iom.districts_by_pcode[getParentDistrictCode(feature)]?.district;
+    // Keep the chosen parent district even when no IOM village row exists.
+    if(parentName) setSelectedDistrictId(parentName);
+    setGeographyLevel('village');
+  }
+  function enterDistrictVillages(districtName:string){
+    if (!iomLayers) return;
+    const hasDistrict=Object.values(iomLayers.iom.districts_by_pcode).some(d=>d.district===districtName);
+    if(!hasDistrict)return;
+    setSelectedDistrictId(districtName);
+    setSelectedId(null);
+    setSelectedCadastre(null);
+    setSelectedMapCenter(null);
+    setGeographyLevel('village');
+  }
+  function clearMapSelection(){
+    setSelectedId(null);
+    setSelectedCadastre(null);
+    setSelectedMapCenter(null);
+    // Clearing a village must NOT close its district drill-down.
+    if(geographyLevel==='district')setSelectedDistrictId(null);
+  }
+  function openAllDistrictReturns(){
+    setGeographyLevel('district');
+    setSelectedId(null);setSelectedCadastre(null);
+    setSelectedDistrictId(null);setSelectedMapCenter(null);
+    setResetMapToken(n=>n+1);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function exploreVillage(id:string){const v=villages.find(x=>x.id===id);if(v){selectVillage(v);window.scrollTo({top:0,behavior:'smooth'});}}
+  return <main className="dashboard-page ton-v2-dashboard ton-evidence-dashboard">
+    <div className="ton-v2-dash-top">
+      <Link className="ton-v2-dash-brand" to="/">TON <strong>618</strong></Link>
+      <div className="ton-v2-dash-heading"><span>GEOGRAPHIC CASE STUDY / 001</span><h1>Lebanon <small>26 districts · 1,627 cadastral areas</small></h1></div>
+      <div className="ton-v2-dash-controls"><span className="ton-v2-data-state"><span/> {mode === 'verified' ? 'PUBLISHED DATA' : 'ILLUSTRATIVE SCENARIO'}</span><Link className="ton-v2-refs-link" to="/references"><BookOpen size={15}/> References</Link><Link className="ton-v2-back" to="/"><ArrowLeft size={15}/> Regions</Link></div>
+    </div>
+    <div className="ton-geography-toolbar">
+      <div className="ton-geography-switch" role="group" aria-label="Map navigation">
+        {geographyLevel==='district' ?
+          <span className="active" style={{display:'flex',alignItems:'center',gap:8,padding:'9px 13px'}}><Map size={16}/> Districts <small>ADM2 · all 26</small></span>
+          : <button type="button" onClick={openAllDistrictReturns}><ArrowLeft size={16}/> Back to districts</button>}
+        {geographyLevel==='district' && selectedDistrict &&
+          <button type="button" onClick={()=>enterDistrictVillages(selectedDistrict.district)} disabled={!iomLayers}><Building2 size={16}/> Open {selectedDistrict.district} villages</button>}
+      </div>
+      <div className="ton-geography-context">
+        <strong>{geographyLevel==='district' ? (selectedDistrict?.district||'Choose a district') : `${selectedDistrict?.district||'District'} / ${cadastreLabel||'Villages'}`}</strong>
+        <span>{geographyLevel==='district' ? 'Single-click a district for its statistics · Double-click to open its villages' : 'Only the selected district’s cadastral borders are shown · Click a village for its evidence'} · <a href="#ton618-aid-calculator">Aid calculator ↓</a> · <a href="#evidence-explorer">Explore charts ↓</a></span>
+      </div>
+    </div>
+    <div className="ton-v2-map-title ton-comparison-topbar"><span><Layers3 size={14}/> {geographyLevel==='district'?'EXPLORE ADMINISTRATIVE DISTRICTS':'EXPLORE CADASTRAL AREAS'}</span><div style={{display:"flex",gap:8,alignItems:"center"}}><button type="button" className="ton-comparison-launch ton-night-launch" onClick={()=>setNightOpen(true)}><MoonStar size={16}/> NIGHTLIGHTS <small>NASA BLACK MARBLE</small></button><button type="button" className="ton-comparison-launch" onClick={()=>setComparisonOpen(true)}><Satellite size={16}/> BEFORE / AFTER <ArrowLeftRight size={14}/><small>Satellite comparison</small></button></div></div>
+    <div className="dashboard-main ton-v2-dash-main">
+      <section className="dashboard-map"><IntelligenceMap selected={geographyLevel==='village'?selected:null} iomLayers={iomLayers} selectedCadastre={geographyLevel==='village'?selectedCadastre:null} onSelectCadastre={selectCadastre} selectedDistrict={selectedDistrict} drillDistrictCode={geographyLevel==='village'&&districtGeoFeature?getFeatureCode(districtGeoFeature,'district'):null} onOpenDistrict={d=>enterDistrictVillages(d.district)} onSelectDistrict={(d,focus)=>{setSelectedDistrictId(d.district);setSelectedMapCenter(focus);setGeographyLevel('district');}} onClearSelection={clearMapSelection} onExitVillageMode={openAllDistrictReturns} geographyLevel={geographyLevel} resetMapToken={resetMapToken} layer={layer} onLayer={setLayer} mode={mode}/></section>
+      <div className="ton-right-stack">
+        <div className="ton-context-panel" id="ton-village-evidence">
+          {iomLoadError && <div role="alert" className="ton-map-warning" style={{position:'relative',top:'auto',right:'auto',maxWidth:'none'}}>Could not load the geographic datasets: {iomLoadError}. Check public/data.</div>}
+          {/* // TON618_UNIFIED_INTELLIGENCE_PANEL_V1 */}
+          <UnifiedIntelligencePanel
+            level={geographyLevel}
+            district={selectedDistrict}
+            districtPcode={districtGeoFeature ? getFeatureCode(districtGeoFeature,'district') : null}
+            cadastreName={cadastreLabel}
+            cadastrePcode={selectedCadastre ? getFeatureCode(selectedCadastre,'village') : null}
+            studyVillage={selected}
+            iom={selectedIomMetrics}
+            onNightlights={()=>setNightOpen(true)}
+            onCompare={()=>setComparisonOpen(true)}
+          />
+        </div>
+      </div>
+    </div>
+    <details className="ton-unified-planner-below">
+      <summary>Future aid-planning workspace</summary>
+      <AidPriorityCard
+        village={geographyLevel==='village'?selected:null}
+        cadastralName={geographyLevel==='village'?cadastreLabel:null}
+        districtName={selectedDistrict?.district ?? 'Lebanon'}
+        mode={mode}
+        onChooseVillage={()=>{ if(geographyLevel==='district'){if(selectedDistrict)enterDistrictVillages(selectedDistrict.district);else document.querySelector('.dashboard-map')?.scrollIntoView({behavior:'smooth',block:'start'});}else document.getElementById('ton-village-evidence')?.scrollIntoView({behavior:'smooth',block:'start'}); }}
+        onOpenDemo={()=>setCalculatorOpen(true)}
+      />
+    </details>
+    <div className="ton-v2-dash-footer"><span><Globe2 size={13}/> TON 618 · Independent prototype</span><span><ShieldCheck size={13}/> Published observations are not field-verified humanitarian needs</span></div>
+    <div className="ton-national-strip"><div><Users size={18}/><span><strong>{iom.national_summary.idps_current.toLocaleString()}</strong> individual displaced persons nationwide <small>IOM report, 28 Oct 2026</small></span></div><div><Waves size={18}/><span><strong>{iom.national_summary.returnees_begun_returning.toLocaleString()}</strong> people began returning <small>IOM report, 28 Oct 2026</small></span></div><div><Building2 size={18}/><span><strong>{undp.overall.damaged_buildings_total.toLocaleString()}</strong> affected buildings <small>UNDP, June 2026</small></span></div></div>
+    <section className="ton-night-feature"><div><span><MoonStar size={15}/> NASA BLACK MARBLE / PUBLISHED STUDIES</span><h2>Lebanon after dark. <em>Observe change over time.</em></h2><p>Compare dated NASA Black Marble imagery and measured radiance trends across Lebanon, the three districts, and the 13 selected areas (10 with published UNDP village damage rates). View the published Southern Lebanon study and World Bank research alongside NASA observations. Distinguish imagery from quantitative radiance data.</p></div><button type="button" onClick={()=>setNightOpen(true)}>Open Nightlights Explorer <ArrowLeftRight size={16}/></button></section>
+    {/* TON618_EVIDENCE_AID_CALCULATOR_V1: real-data humanitarian planning, separate from legacy demo */}
+    <EvidenceAidCalculator
+      level={geographyLevel}
+      districtName={selectedDistrict?.district ?? null}
+      districtPcode={districtGeoFeature ? getFeatureCode(districtGeoFeature,'district') : null}
+      cadastreName={cadastreLabel}
+      cadastrePcode={selectedCadastre ? getFeatureCode(selectedCadastre,'village') : null}
+      iom={selectedIomMetrics}
+    />
+    <EvidenceExplorer focusVillageId={selectedId} focusDistrictId={selectedStudyDistrict?.id??null} onSelectVillage={exploreVillage} returnsRequested={0}/>
+    {selected && <CalculatorModal open={calculatorOpen} onClose={() => setCalculatorOpen(false)} village={selected} assessment={data} mode={mode}/>}
+    <NightlightsModal open={nightOpen} onClose={()=>setNightOpen(false)} initialLevel={geographyLevel} initialDistrictId={currentDistrict.id} initialVillageId={selectedId}/>
+    <ComparisonModal open={comparisonOpen} onClose={() => setComparisonOpen(false)} focus={comparisonFocus}/>
+  </main>;
+}

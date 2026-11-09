@@ -1,0 +1,1309 @@
+{
+  "generated_at": "2026-11-09T11:34:55.620Z",
+  "source_rows": 162,
+  "matched": 159,
+  "unmatched": [
+    {
+      "source_name": "Aramoun",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "reason": "no exact/curated alias match",
+      "candidates": [],
+      "same_district_count": 82
+    },
+    {
+      "source_name": "Choueifat El-Amrousieh",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "reason": "no exact/curated alias match",
+      "candidates": [],
+      "same_district_count": 82
+    },
+    {
+      "source_name": "Choueifat Qobbeh",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "reason": "no exact/curated alias match",
+      "candidates": [],
+      "same_district_count": 82
+    }
+  ],
+  "ambiguous": [],
+  "district_summaries_joined": 3,
+  "districtUnmatched": [],
+  "matched_rows": [
+    {
+      "source_name": "Aaintaroun",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaintaroun",
+      "pcode": "72151",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bent Jbayl",
+      "pcode": "72111",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aayta Ech-Chaab",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aayta Ech-Chaab",
+      "pcode": "72183",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Beit Lif",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Beit Lif",
+      "pcode": "72287",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Yaroun",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Yaroun",
+      "pcode": "72159",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aaynata Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaynata Bent Jbayl",
+      "pcode": "72119",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Hanine",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Hanine",
+      "pcode": "72284",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Rachaf",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Rachaf",
+      "pcode": "72271",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Tiri",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Tiri",
+      "pcode": "72254",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Yater",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Yater",
+      "pcode": "72277",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chaqra",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chaqra",
+      "pcode": "72229",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Kounine",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kounine",
+      "pcode": "72251",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qaouzah",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qaouzah",
+      "pcode": "72291",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Beit Yahoun",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Beit Yahoun",
+      "pcode": "72237",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Ramyet Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Ramyet Bent Jbayl",
+      "pcode": "72191",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Rmaich",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Rmaich",
+      "pcode": "72167",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Ghandouriyet Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Ghandouriyet Bent Jbayl",
+      "pcode": "72274",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jmaijmeh",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jmaijmeh",
+      "pcode": "72221",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Khirbet Selm",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Khirbet Selm",
+      "pcode": "72234",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Soultaniyet Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Soultaniyet Bent Jbayl",
+      "pcode": "72214",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Kfar Dounine",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kfar Dounine",
+      "pcode": "72247",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Haddatha",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Haddatha",
+      "pcode": "72231",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Froun",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Froun",
+      "pcode": "72276",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Maroun Er-Ras",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Maroun Er-Ras",
+      "pcode": "72127",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aaita Ej-Jabal",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaita Ej-Jabal",
+      "pcode": "72224",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Baraachit",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Baraachit",
+      "pcode": "72227",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Debl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Debl",
+      "pcode": "72281",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Tibnine",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Tibnine",
+      "pcode": "72211",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Haris",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Haris",
+      "pcode": "72241",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Kafra Bent Jbayl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kafra Bant Jbayl",
+      "pcode": "72257",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qalaouiyeh",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qalaouiyeh",
+      "pcode": "72261",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Srobbine",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Srobbine",
+      "pcode": "72267",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Borj Qalaouiyeh",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Borj qalaouiyeh",
+      "pcode": "72264",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Ntar",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Ntar",
+      "pcode": "72244",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aain Ibl",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aain Ibl",
+      "pcode": "72143",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Safad Al-Battikh",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Safad Al-Battikh",
+      "pcode": "72217",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Salhani",
+      "source_district": "Bent Jbeil",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Salhani",
+      "pcode": "72135",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Meiss Ej-Jabal",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Meiss Ej-Jabal",
+      "pcode": "73250",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Taybet Marjaayoun",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Taybet Matjaayoun",
+      "pcode": "73232",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Houla",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Houla",
+      "pcode": "73234",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Markaba",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Markaba",
+      "pcode": "73245",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Blida",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Blida",
+      "pcode": "73288",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Siriane",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Siriane",
+      "pcode": "73230",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Rabb Et-Tlatine",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Rabb Et-Tlatine",
+      "pcode": "73257",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aadchit El-Qoussair",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aadchit El-Qoussair",
+      "pcode": "73256",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qantara",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qantara",
+      "pcode": "73276",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Majdel Selm",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Majdel Selm",
+      "pcode": "73279",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qabrikha",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qabrikha",
+      "pcode": "73262",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Touline",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Touline",
+      "pcode": "73282",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Saouanet Marjaayoun",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Saouanet Marjayoun",
+      "pcode": "73280",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Talloussa",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Talloussa",
+      "pcode": "73244",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bany Haiyane",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bany haiyane",
+      "pcode": "73226",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Mhaibib",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mhaibib",
+      "pcode": "73248",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aalmane Marjaayoun",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aalmane Marjaayoun",
+      "pcode": "73293",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aadaysseh Marjaayoun",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aadaysseh Marjaayoun",
+      "pcode": "73211",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Kfar Kila",
+      "source_district": "Marjaayoun",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kfar Kila",
+      "pcode": "73228",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Yohmor En-Nabatiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Yohmor En-Nabatiyeh",
+      "pcode": "71394",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Zaoutar Ech-Charqiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Zaoutar Ech-Charqiyeh",
+      "pcode": "71367",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Kfar Sir",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kfar Sir",
+      "pcode": "71391",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Sir El-Gharbiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Sir El-Gharbiyeh",
+      "pcode": "71397",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Arnoun",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Arnoun",
+      "pcode": "71377",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Zaoutar El-Gharbiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Zaoutar El-Gharbiyeh",
+      "pcode": "71364",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Qsaibet En-Nabatiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qsaibet En-Nabatiyeh",
+      "pcode": "71374",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Qaaqaaiyet Ej-Jisr",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qaaqaaiyet Ej-Jisr",
+      "pcode": "71381",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Hamra En-Nabattiyeh",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Hamra En-Nabattiyeh",
+      "pcode": "71371",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Mayfadoun",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mayfadoun",
+      "pcode": "71344",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Braiqeaa",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Braiqeaa",
+      "pcode": "71387",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Kfar Tibnit",
+      "source_district": "El Nabatieh",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kfar Tibnit",
+      "pcode": "71166",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Borj Ech Chemali",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Borj Ech-Chemali",
+      "pcode": "62128",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Borj En-Naqoura",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Borj En-Naqoura",
+      "pcode": "62312",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aabbassiyet Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aabbassiyet Sour",
+      "pcode": "62276",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Sour",
+      "pcode": "62111",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Mansouri Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mansouri Sour",
+      "pcode": "62296",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qlaileh Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qlaileh Sour",
+      "pcode": "62287",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bazouriyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bazouriyeh",
+      "pcode": "62246",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jouaiya",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jouaiya",
+      "pcode": "62211",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chamaa",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chamaa",
+      "pcode": "62298",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Qana",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Qana",
+      "pcode": "62229",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chehabiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chehabiyeh",
+      "pcode": "62254",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Mazraat Ez-Zalloutiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mazraat Ez-Zalloutiyeh",
+      "pcode": "62351",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Debaal Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Debaal Sour",
+      "pcode": "62212",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Mheilib",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mheilib",
+      "pcode": "62245",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Tayr Debbeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Tayr Debbeh",
+      "pcode": "62253",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Tayr Falsay",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Tayr Falsay",
+      "pcode": "62271",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aain Baal",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aain Baal",
+      "pcode": "62243",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aaytit",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaytit",
+      "pcode": "62217",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Tayr Harfa",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Tayr Harfa",
+      "pcode": "62295",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Zebqine",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Zebqine",
+      "pcode": "62286",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Majdelzoun",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Majdelzoun",
+      "pcode": "62297",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Barich",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Barich",
+      "pcode": "62224",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jbal El-Botm",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jbal El-Botm",
+      "pcode": "62279",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Majdel",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Majdel",
+      "pcode": "62214",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Rmadiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Rmadiyeh",
+      "pcode": "62259",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aalma Ech-Chaab",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aalma Ech-Chaab",
+      "pcode": "62316",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Sadiqine",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Sadiqine",
+      "pcode": "62241",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Srifa",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Srifa",
+      "pcode": "62266",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chaaitiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chaaitiyeh",
+      "pcode": "62277",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Merouahine",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Merouahine",
+      "pcode": "62311",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bedias",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bedias",
+      "pcode": "62274",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Halloussiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Halloussiyeh",
+      "pcode": "62269",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Qanoun El-Aain",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Qanoun El-Aain",
+      "pcode": "62179",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Hamoul",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Hamoul",
+      "pcode": "62314",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Iskandarouna Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Iskandarouna Sour",
+      "pcode": "62299",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Maaroub",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Maaroub",
+      "pcode": "62234",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Mazraat Mechref",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Mazraat Mechref",
+      "pcode": "62215",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Qanoun En-Nahr",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Qanoun En-Nahr",
+      "pcode": "62263",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Henniyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Henniyeh",
+      "pcode": "62293",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Abou Chech",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Abou Chech",
+      "pcode": "62319",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chihine",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chihine",
+      "pcode": "62285",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Aames",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Aames",
+      "pcode": "62223",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Hanaouay",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Hanaouay",
+      "pcode": "62247",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aaziyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaziyeh",
+      "pcode": "62294",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Batoulay",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Batoulay",
+      "pcode": "62162",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Arzoun",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Arzoun",
+      "pcode": "62256",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Derdaghaiya",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Derdaghaiya",
+      "pcode": "62239",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Maarakeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Maarakeh",
+      "pcode": "62231",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Recheknanay",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Recheknanay",
+      "pcode": "62236",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Chehour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Chehour",
+      "pcode": "62264",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Ouadi Jilo",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Ouadi Jilo",
+      "pcode": "62218",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Selaa Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Selaa Sour",
+      "pcode": "62227",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Borj Rahhal",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Borj Rahhal",
+      "pcode": "62283",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Boustane",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Boustane",
+      "pcode": "62321",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Deir Kifa",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Deir Kifa",
+      "pcode": "62251",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Dhayra",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Dhayra",
+      "pcode": "62341",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Toura",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Toura",
+      "pcode": "62261",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Yarine",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Yarine",
+      "pcode": "62308",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bafliyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bafliyeh",
+      "pcode": "62221",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jibbayn",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jibbayn",
+      "pcode": "62292",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Biyad",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Biyad",
+      "pcode": "62226",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jennata",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jennata",
+      "pcode": "62237",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Jijim",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jijim",
+      "pcode": "62318",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Neftakhiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Neftakhiyeh",
+      "pcode": "62233",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Niha Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Niha Sour",
+      "pcode": "62257",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aaiyeh",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aaiyeh",
+      "pcode": "62242",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Bestiyat",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Bestiyat",
+      "pcode": "62249",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Hmairi Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Hmairi Sour",
+      "pcode": "62244",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Kneisset Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Kneisset Sour",
+      "pcode": "62267",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Yanouh Sour",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Yanouh Sour",
+      "pcode": "62219",
+      "coverage": "full"
+    },
+    {
+      "source_name": "Aain Abou Abdallah",
+      "source_district": "Sour",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Aain Abou Abdallah",
+      "pcode": "62291",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Zrariyeh",
+      "source_district": "Saida",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Zrariyeh",
+      "pcode": "61427",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Arzai",
+      "source_district": "Saida",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Arzai",
+      "pcode": "61417",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Jazira Saida",
+      "source_district": "Saida",
+      "dataset_id": "undp_south_2026_04",
+      "matched_name": "Jazira Saida",
+      "pcode": "61411",
+      "coverage": "partial"
+    },
+    {
+      "source_name": "Bchamoun",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Bchamoun",
+      "pcode": "24243",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Choueifat El-Oumara",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Choueifat El-Oumara",
+      "pcode": "24155",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Deir Qoubel",
+      "source_district": "Aley",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Deir Qoubel",
+      "pcode": "24177",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Baabda",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Baabda",
+      "pcode": "21211",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Bourj El-Brajneh",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Bourj El-Brajneh",
+      "pcode": "21177",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Chiyah",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Chiyah",
+      "pcode": "21111",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Hadath Beyrouth",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Hadath Beyrouth",
+      "pcode": "21219",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Haret Hreik",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Haret Hreik",
+      "pcode": "21144",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Kfar Chima",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Kfar Chima",
+      "pcode": "21251",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Laylakeh",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Laylakeh",
+      "pcode": "21166",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Tahouitat El Ghadir",
+      "source_district": "Baabda",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Tahouitat El Ghadir",
+      "pcode": "21188",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Ain el Mreisseh",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Ain el-Mreisseh",
+      "pcode": "10110",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Bachoura",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Bachoura",
+      "pcode": "10350",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Mazraa",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Mazraa",
+      "pcode": "10310",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Moussaytbeh",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Moussaytbeh",
+      "pcode": "10210",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Ras Beyrouth",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Ras Beyrouth",
+      "pcode": "10150",
+      "coverage": "assessment_area"
+    },
+    {
+      "source_name": "Zoukak el Blatt",
+      "source_district": "Beirut",
+      "dataset_id": "undp_beirut_mount_2026_04",
+      "matched_name": "Zoukak el-Blatt",
+      "pcode": "10410",
+      "coverage": "assessment_area"
+    }
+  ],
+  "important_note": "Only unique, exact name+district or manually reviewed aliases are used; unresolved source rows are NOT joined or silently assigned to nearby areas."
+}

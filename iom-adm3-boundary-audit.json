@@ -1,0 +1,122 @@
+{
+  "districtFeatures": 26,
+  "cadastralFeatures": 1627,
+  "iomDistricts": 26,
+  "iomCadastres": 604,
+  "matchedDistricts": 26,
+  "matchedCadastres": 604,
+  "missingAdm3Codes": [],
+  "duplicateAdm3Codes": [
+    {
+      "code": "0",
+      "features": [
+        {
+          "index": 0,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 1,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 2,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 3,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 4,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 5,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 6,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 7,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 8,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 9,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 10,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 11,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 12,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 13,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 14,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 15,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        },
+        {
+          "index": 16,
+          "name": "Conflict",
+          "district": "Conflict",
+          "geometryType": "Polygon"
+        }
+      ],
+      "ambiguous": false
+    }
+  ],
+  "ambiguousAdm3Codes": [],
+  "unmatchedAdm3": [],
+  "unmatchedAdm2": []
+}

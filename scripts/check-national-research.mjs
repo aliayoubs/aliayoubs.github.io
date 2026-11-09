@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const read=(p)=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
+const src=read('../src/data/districtResearch.ts');
+const pop=src.split('export const districtHistoricPopulation:')[1].split('export const districtDamage2024:')[0];
+const dmg=src.split('export const districtDamage2024:')[1].split('export const districtDamageJune2026:')[0];
+const d26=src.split('export const districtDamageJune2026:')[1].split('export const lookupDistrictPopulation')[0];
+assert.equal((pop.match(/residents:\d+/g)||[]).length,26,'All 26 CAS district populations');
+assert.equal((dmg.match(/affectedBuildings:\d+/g)||[]).length,15,'Fifteen historical 2024 district damage estimates');
+assert.equal((d26.match(/destroyed:\d+/g)||[]).length,3,'Three Beirut and Mount Lebanon June 2026 results');
+assert.match(pop,/district:'Baabda',residents:553800/);
+assert.match(pop,/district:'Bent Jbeil',residents:96200/);
+assert.match(dmg,/district:'Sour',preConflictBuildingsInAssessedCadastres:65021,affectedBuildings:16105/);
+assert.match(dmg,/district:'Baabda',preConflictBuildingsInAssessedCadastres:29580,affectedBuildings:7115,severelyDamaged:460,moderatelyDamaged:90,possiblyDamaged:155,categorySumMismatch:true/);
+assert.match(read('../src/components/dashboard/NationwideDistrictPanel.tsx'),/HISTORICAL POPULATION/);
+assert.match(read('../src/components/map/IntelligenceMap.tsx'),/DISTRICT BUILDING-DAMAGE DATASET/);
+console.log('PASS — 26 historical populations, 15 historical-damage districts, 3 June 2026 Beirut/Mount results.');

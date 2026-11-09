@@ -1,0 +1,514 @@
+{
+  "datasetId": "NASA/VIIRS/002/VNP46A2",
+  "source": "NASA Suomi NPP VIIRS VNP46A2 Collection 2; Google Earth Engine September diagnostic exports",
+  "sourceUrl": "https://developers.google.com/earth-engine/datasets/catalog/NASA_VIIRS_002_VNP46A2",
+  "boundarySource": "FAO/GAUL/2025/level2",
+  "boundaryUrl": "https://developers.google.com/earth-engine/datasets/catalog/FAO_GAUL_2025_level2",
+  "method": "Daily high-quality persistent NTL (MQF=0), snow-free nighttime with confidently or probably clear clouds; at least three nights per pixel. District mean of per-pixel September daily medians (500 m) for 2025 and 2026. Same diagnostic GEE procedure for both periods; differs from World Bank Space2Stats. Not a direct building damage indicator.",
+  "unit": "nW/cm²/sr",
+  "sourceYears": [
+    2025,
+    2026
+  ],
+  "periodStart": "2025-09",
+  "periodEnd": "2026-09",
+  "generatedAtUtc": "2026-11-09T13:35:49.975191+00:00",
+  "coverageWarnings": [],
+  "missingObservations": [],
+  "districts": [
+    {
+      "district": "Beirut",
+      "gaulName": "Beirut",
+      "gaulCode": "129428",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 63.44131935236078,
+          "validPixels": 133,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 64.84451458523539,
+          "validPixels": 133,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Aley",
+      "gaulName": "Aley",
+      "gaulCode": "129436",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 5.515607429679654,
+          "validPixels": 1423,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 5.439959088132043,
+          "validPixels": 1423,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Baabda",
+      "gaulName": "Baabda",
+      "gaulCode": "129437",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 11.187934709725734,
+          "validPixels": 1065,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 11.544163079975762,
+          "validPixels": 1065,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Chouf",
+      "gaulName": "Chouf",
+      "gaulCode": "129438",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 2.6770988508136644,
+          "validPixels": 2514,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 2.72925742893622,
+          "validPixels": 2514,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Meten",
+      "gaulName": "El Meten",
+      "gaulCode": "129439",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 14.659733415524967,
+          "validPixels": 1410,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 15.158688956440761,
+          "validPixels": 1410,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Jbeil",
+      "gaulName": "Jbeil",
+      "gaulCode": "129440",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 2.9792235542936996,
+          "validPixels": 2206,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 2.7817203056557793,
+          "validPixels": 2206,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Kesrwane",
+      "gaulName": "Kesrwane",
+      "gaulCode": "129441",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 7.94756733652063,
+          "validPixels": 1806,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 7.68292502971418,
+          "validPixels": 1806,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Akkar",
+      "gaulName": "Akkar",
+      "gaulCode": "129425",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 1.42987315966575,
+          "validPixels": 4018,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.333345978488756,
+          "validPixels": 4018,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Bcharre",
+      "gaulName": "Bcharre",
+      "gaulCode": "129442",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 1.2054602261475635,
+          "validPixels": 754,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.083458920078429,
+          "validPixels": 775,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Batroun",
+      "gaulName": "El Batroun",
+      "gaulCode": "129443",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 3.0136416398994115,
+          "validPixels": 1532,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 3.0923904858061033,
+          "validPixels": 1532,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Koura",
+      "gaulName": "El Koura",
+      "gaulCode": "129444",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 4.497474248502827,
+          "validPixels": 960,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 5.044427728987916,
+          "validPixels": 960,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Minieh-Dennie",
+      "gaulName": "El Minieh-Dennie",
+      "gaulCode": "129445",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 2.070413807444192,
+          "validPixels": 1596,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 2.1028343999333536,
+          "validPixels": 1594,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Tripoli",
+      "gaulName": "Tripoli",
+      "gaulCode": "129446",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 22.91230651823494,
+          "validPixels": 186,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 23.36791308436191,
+          "validPixels": 186,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Zgharta",
+      "gaulName": "Zgharta",
+      "gaulCode": "129447",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 3.970223281178963,
+          "validPixels": 972,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 4.122822109139459,
+          "validPixels": 972,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Saida",
+      "gaulName": "Saida",
+      "gaulCode": "129449",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 4.837746202940826,
+          "validPixels": 1503,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 5.102818011298167,
+          "validPixels": 1503,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Sour",
+      "gaulName": "Sour",
+      "gaulCode": "129450",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 3.958365316121107,
+          "validPixels": 2123,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 3.4733533165131463,
+          "validPixels": 2123,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Jezzine",
+      "gaulName": "Jezzine",
+      "gaulCode": "129448",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 1.9149556797224565,
+          "validPixels": 1324,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.9820121180271317,
+          "validPixels": 1324,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Bent Jbeil",
+      "gaulName": "Bent Jbeil",
+      "gaulCode": "129432",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 2.462937007245105,
+          "validPixels": 1427,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.7865595397732152,
+          "validPixels": 1427,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Nabatieh",
+      "gaulName": "El Nabatieh",
+      "gaulCode": "129433",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 3.0149872343461737,
+          "validPixels": 1629,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 2.1369938327727165,
+          "validPixels": 1629,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Hasbaya",
+      "gaulName": "Hasbaya",
+      "gaulCode": "129434",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 1.1613730218097105,
+          "validPixels": 1198,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.2148110748376493,
+          "validPixels": 1198,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Marjaayoun",
+      "gaulName": "Marjaayoun",
+      "gaulCode": "129435",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 1.727208688537169,
+          "validPixels": 1398,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 1.3399999175228279,
+          "validPixels": 1398,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Rachaya",
+      "gaulName": "Rachaya",
+      "gaulCode": "129429",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 0.8248551928074261,
+          "validPixels": 2747,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 0.9397375849354626,
+          "validPixels": 2747,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "West Bekaa",
+      "gaulName": "West Bekaa",
+      "gaulCode": "129430",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 2.134854638884126,
+          "validPixels": 2256,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 2.6123224836019947,
+          "validPixels": 2256,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Zahle",
+      "gaulName": "Zahle",
+      "gaulCode": "129431",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 6.491247524095627,
+          "validPixels": 2298,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 6.9582836796541585,
+          "validPixels": 2298,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "Baalbek",
+      "gaulName": "Baalbek",
+      "gaulCode": "129426",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 0.8215453898117888,
+          "validPixels": 11719,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 0.8065782195451977,
+          "validPixels": 11705,
+          "availableDailyImages": 30
+        }
+      ]
+    },
+    {
+      "district": "El Hermel",
+      "gaulName": "El Hermel",
+      "gaulCode": "129427",
+      "points": [
+        {
+          "period": "2025-09",
+          "radiance": 0.533136815651723,
+          "validPixels": 2710,
+          "availableDailyImages": 30
+        },
+        {
+          "period": "2026-09",
+          "radiance": 0.44001212250304045,
+          "validPixels": 2680,
+          "availableDailyImages": 30
+        }
+      ]
+    }
+  ]
+}

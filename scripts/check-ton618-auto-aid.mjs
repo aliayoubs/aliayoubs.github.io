@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const r=x=>fs.readFileSync(x,'utf8');
+const d=r('src/pages/Dashboard.tsx');
+const c=r('src/components/calculator/EvidenceAidCalculator.tsx');
+const l=r('src/lib/aidAutoAssessment.ts');
+assert(c.includes('TON618_AUTOMATIC_AID_V2'),'Auto calculator component not installed');
+assert.equal(d.split('<EvidenceAidCalculator').length-1,1,'Expected one calculator');
+assert(d.includes('iom={selectedIomMetrics}'),'IOM selection not passed');
+assert(d.includes('level={geographyLevel}'),'Map geography selection not passed');
+assert(!d.includes('<CalculatorModal'),'Old manual entry modal still present');
+assert(!c.includes('<input')&&!c.includes('<Input'),'Manual input still present in aid calculator');
+assert(c.includes('automaticResourcePlan')&&c.includes('WATER_LITRES_PER_PERSON_DAY'));
+assert(l.includes('AUTOMATIC_DAYS = 30'));
+assert(c.includes('Incomplete')||c.includes('completeScore'));
+console.log('PASS: automatic panel, 30-day planning, map selection, data joins and zero manual inputs.');
+console.log('Run npm run build and then test villages with and without IOM data.');

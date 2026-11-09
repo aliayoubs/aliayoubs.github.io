@@ -1,0 +1,26 @@
+{
+  "areas": 1610,
+  "districts": 26,
+  "periods": [
+    "2025-09",
+    "2026-09"
+  ],
+  "2025_all": 570,
+  "2025_low": 52,
+  "2025_nominal_high": 518,
+  "2025_high": 11,
+  "2026_all": 771,
+  "2026_low": 92,
+  "2026_nominal_high": 679,
+  "2026_high": 18,
+  "below_10_pixels": 325,
+  "unchanged": 1385,
+  "below_5_pixels": 133,
+  "no_spatial_support": 27,
+  "2025_areas_with_any": 105,
+  "2025_areas_with_nominal_high": 100,
+  "decreasing": 97,
+  "2026_areas_with_any": 112,
+  "2026_areas_with_nominal_high": 100,
+  "increasing": 101
+}

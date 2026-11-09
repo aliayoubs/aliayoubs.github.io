@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-09T11:16:26.682Z",
+  "source": {
+    "publisher": "UNDP",
+    "title": "Building-Level Damage Assessment: South Lebanon (issue no. 2) | GeoAI-based Rapid Assessment",
+    "publication_date": "2026-07",
+    "observation_date": "2026-06-16",
+    "limitations": "Geographic and observation coverage are limited. These numbers are visual-satellite assessment results, not a live damage census or field-verified condition."
+  },
+  "coverage": {
+    "adm3_boundaries": 1627,
+    "villages_with_published_damage_in_this_extract": 10,
+    "all_cadastres_in_assessment": 163,
+    "note": "Other cadastres may have been assessed but are not in the top-ten extract. No missing record means zero destruction."
+  },
+  "overall_south_2026": {
+    "study_area_building_footprints": 183018,
+    "previously_2024_damaged_excluded": 12129,
+    "cloud_obscured_excluded": 3596,
+    "overlap_in_exclusions": 167,
+    "assessed_buildings": 167460,
+    "damaged_buildings_total": 52284,
+    "assessed_buildings_damaged_pct_published": 31.2,
+    "destroyed_buildings": 24068,
+    "partially_damaged_buildings": 7191,
+    "minor_damage_buildings": 21025,
+    "destroyed_units": 36139,
+    "partially_damaged_units": 11511,
+    "minor_damage_units": 32949,
+    "total_debris_volume_m3": 7007132,
+    "debris_weight_low_density_t": 11842055,
+    "debris_weight_high_density_t": 15766047,
+    "damage_cost_usd": 3050134241,
+    "el_nabatieh_share_of_destroyed_pct_reported": 85
+  },
+  "by_pcode": {
+    "62111": {
+      "pcode": "62111",
+      "name": "Sour",
+      "district": "Sour",
+      "feature_index": 1328,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 867,
+      "affected_stock_percent": 10.6,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "72111": {
+      "pcode": "72111",
+      "name": "Bent Jbayl",
+      "district": "Bent Jbeil",
+      "feature_index": 1534,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 2712,
+      "affected_stock_percent": 77.6,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "72119": {
+      "pcode": "72119",
+      "name": "Aaynata Bent Jbayl",
+      "district": "Bent Jbeil",
+      "feature_index": 1535,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 1285,
+      "affected_stock_percent": 78.6,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "72151": {
+      "pcode": "72151",
+      "name": "Aaintaroun",
+      "district": "Bent Jbeil",
+      "feature_index": 1539,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 2528,
+      "affected_stock_percent": 91.4,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "72183": {
+      "pcode": "72183",
+      "name": "Aayta Ech-Chaab",
+      "district": "Bent Jbeil",
+      "feature_index": 1543,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 1276,
+      "affected_stock_percent": 89.6,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "72229": {
+      "pcode": "72229",
+      "name": "Chaqra",
+      "district": "Bent Jbeil",
+      "feature_index": 1551,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 864,
+      "affected_stock_percent": 26.4,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "73228": {
+      "pcode": "73228",
+      "name": "Kfar Kila",
+      "district": "Marjaayoun",
+      "feature_index": 1588,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 1233,
+      "affected_stock_percent": 92.7,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "73232": {
+      "pcode": "73232",
+      "name": "Taybet Matjaayoun",
+      "district": "Marjaayoun",
+      "feature_index": 1590,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 1426,
+      "affected_stock_percent": 69.1,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "73250": {
+      "pcode": "73250",
+      "name": "Meiss Ej-Jabal",
+      "district": "Marjaayoun",
+      "feature_index": 1595,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 2507,
+      "affected_stock_percent": 74.4,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    },
+    "73288": {
+      "pcode": "73288",
+      "name": "Blida",
+      "district": "Marjaayoun",
+      "feature_index": 1603,
+      "assessed_buildings": null,
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "minor_damaged_buildings": null,
+      "affected_buildings": 1495,
+      "affected_stock_percent": 87.1,
+      "imagery_coverage_percent": 100,
+      "evidence_status": "published_affected_count_only",
+      "assessment_date": "2026-06-16",
+      "publication_date": "2026-07",
+      "source": "UNDP South Lebanon building-level damage assessment, Issue 2, July 2026",
+      "note": "This village count describes ALL affected buildings. It must NOT be presented as destroyed buildings. Severity breakdown is not available in this extract."
+    }
+  },
+  "match_audit": {
+    "matched": [
+      {
+        "source_name": "Bent Jbayl",
+        "pcode": "72111",
+        "matched_name": "Bent Jbayl"
+      },
+      {
+        "source_name": "Aaintaroun",
+        "pcode": "72151",
+        "matched_name": "Aaintaroun"
+      },
+      {
+        "source_name": "Meiss Ej-Jabal",
+        "pcode": "73250",
+        "matched_name": "Meiss Ej-Jabal"
+      },
+      {
+        "source_name": "Blida",
+        "pcode": "73288",
+        "matched_name": "Blida"
+      },
+      {
+        "source_name": "Taybet Matjaayoun",
+        "pcode": "73232",
+        "matched_name": "Taybet Matjaayoun"
+      },
+      {
+        "source_name": "Aaynata Bent Jbayl",
+        "pcode": "72119",
+        "matched_name": "Aaynata Bent Jbayl"
+      },
+      {
+        "source_name": "Aayta Ech-Chaab",
+        "pcode": "72183",
+        "matched_name": "Aayta Ech-Chaab"
+      },
+      {
+        "source_name": "Kfar Kila",
+        "pcode": "73228",
+        "matched_name": "Kfar Kila"
+      },
+      {
+        "source_name": "Sour",
+        "pcode": "62111",
+        "matched_name": "Sour"
+      },
+      {
+        "source_name": "Chaqra",
+        "pcode": "72229",
+        "matched_name": "Chaqra"
+      }
+    ],
+    "unmatched": [],
+    "ambiguous": []
+  }
+}

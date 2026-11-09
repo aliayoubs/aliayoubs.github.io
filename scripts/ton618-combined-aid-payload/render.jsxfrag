@@ -1,0 +1,67 @@
+  // TON618_IOM_COMBINED_REDESIGN_V1: clear 30-day planning output, with no manual inputs.
+  const populationLabel=plan.reported.complete ? 'Both groups reported'
+    : plan.people===null ? 'No village-level mobility totals reported' : 'Partial coverage: one group unreported';
+  const scoreLabel=summary.status==='complete' ? 'All five indicators available'
+    : summary.status==='partial' ? 'Partial indicators · interpret cautiously'
+    : summary.status==='single-indicator' ? 'One indicator only' : 'No usable indicators';
+  return <section id="ton618-aid-calculator" className="ton-aid2 ton-aid-auto ton-aid-simple" aria-label="Automatic humanitarian resource calculator">
+    <header className="ton-aid2-hero ton-aid-simple-hero">
+      <div>
+        <span className="ton-aid2-kicker"><Calculator size={16}/> TON 618 / RESOURCE COVERAGE ESTIMATE</span>
+        <h2>Humanitarian Aid Calculator</h2>
+        <p>Automatically calculated for a 30-day planning period. No data entry required.</p>
+      </div>
+      <div className="ton-aid2-context">
+        <small>{level.toUpperCase()} SELECTED</small>
+        <strong>{areaName??'Choose an area'}</strong>
+        <span>{known?`P-code ${pcode}`:ambiguous?'Unresolved boundary code':'Select a district or village'}</span>
+      </div>
+    </header>
+    {!known ? <div className="ton-aid2-empty"><Info size={18}/> Select a district or a village with an unambiguous administrative code.</div> : <>
+      <section className="ton-aid-simple-population" aria-label="Population used in calculator">
+        <div className="ton-aid-simple-section-heading"><span>01</span><h3><Users size={16}/> People included</h3><small>{populationLabel}</small></div>
+        <div className="ton-aid-simple-pop-main">
+          <div><small>Reported planning group total</small><strong>{whole(plan.people)}</strong><span>people · reported returnees + displaced people hosted here</span></div>
+          <div className="ton-aid-simple-pop-parts">
+            <div><small>Returned to this area</small><strong>{whole(plan.reported.returned)}</strong></div>
+            <div><small>Displaced people hosted here</small><strong>{whole(plan.reported.hosted)}</strong></div>
+          </div>
+        </div>
+        <p className="ton-aid-simple-inline-note">{plan.caveat}</p>
+      </section>
+      <section className="ton-aid-simple-resources" aria-label="Thirty-day resource requirements">
+        <div className="ton-aid-simple-section-heading"><span>02</span><h3>30-day resource coverage</h3><small>Based only on reported groups</small></div>
+        <div className="ton-aid-simple-resource-cards">
+          <div><div className="ton-aid-simple-resource-label"><Droplets size={19}/><span>Water</span></div><strong>{whole(plan.waterLitres)}</strong><small>litres over 30 days</small><p>{WATER_LITRES_PER_PERSON_DAY} litres per person per day</p></div>
+          <div><div className="ton-aid-simple-resource-label"><BookOpen size={19}/><span>Food energy</span></div><strong>{whole(plan.foodKcal)}</strong><small>kcal over 30 days</small><p>{FOOD_KCAL_PER_PERSON_DAY.toLocaleString('en-US')} kcal per person per day</p></div>
+        </div>
+        {plan.people===null && <p className="ton-aid-simple-inline-note">No IOM population figure was reported for either group, so resource quantities cannot be calculated for this area.</p>}
+      </section>
+      <section className="ton-aid-simple-assessment" aria-label="Adaptive humanitarian evidence indicators">
+        <div className="ton-aid-simple-section-heading"><span>03</span><h3><BarChart3 size={16}/> Humanitarian indicators</h3><small>{scoreLabel}</small></div>
+        <div className="ton-aid-simple-assessment-grid">
+          <div><small>Experimental indicator score</small><strong>{percentage(summary.observedScore)}</strong><span>This is not an aid quantity or a verified number of people in need.</span></div>
+          <div><small>Evidence coverage</small><strong>{observedCoverage}%</strong><span>{summary.used.length} / {factors.length} indicators included</span></div>
+        </div>
+        {summary.used.length>0 && <p className="ton-aid-simple-factorline"><strong>Factors used:</strong> {summary.used.map(f=>f.label).join(' · ')}</p>}
+        {summary.missing.length>0 && <p className="ton-aid-simple-muted">Unavailable factors: {summary.missing.join(', ')}. Available weights are renormalized; partial scores are not directly comparable between areas.</p>}
+      </section>
+      <details className="ton-aid-auto-details ton-aid-simple-details">
+        <summary><Info size={15}/> More details and calculation method</summary>
+        <div className="ton-aid-auto-row"><span>WorldPop modeled population (context only)</span><strong>{whole(plan.baselineWorldPop)}</strong></div>
+        <div className="ton-aid-auto-row"><span>Reported group coverage</span><strong>{plan.reported.complete?'Both IOM groups available':plan.people===null?'Neither IOM group available':'Partial: one IOM group missing'}</strong></div>
+        {districtMode && <div className="ton-aid-auto-row"><span>People displaced from district (excluded from total)</span><strong>{whole(joinedIom?.originIdpsNationwide??null)}</strong></div>}
+        <div className="ton-aid-auto-row"><span>People verified to need shelter</span><strong>Not collected</strong></div>
+        <div className="ton-aid-auto-row"><span>Verified aid already supplied</span><strong>Not collected</strong></div>
+        <div className="ton-aid-auto-row"><span>Verified unmet aid requirement</span><strong>Not available</strong></div>
+        <p><strong>Population:</strong> IOM returnees to the area and currently displaced people hosted there are added as separately reported groups. A missing count is never zero. Zero plus zero remains zero for these reported groups; this does not prove nobody else lives in the area. {districtMode?'District collective-site figures are not silently included.':''}</p>
+        <p><strong>Resource benchmark:</strong> reported group total × 30 days × 15 litres of water or 2,100 kcal of food energy per person per day. These are coverage scenarios, not confirmed aid needs. WorldPop modeled figures are for context only, not substituted when IOM groups are missing.</p>
+        <p><strong>Formula for this area:</strong> {formula || 'No available factors'}</p>
+        <p><strong>Full five-factor status:</strong> {summary.completeScore===null?'Incomplete':'All factors available (experimental model)'}</p>
+        <p><strong>Adaptive evidence:</strong> the five indicators are displacement, building damage, nighttime lights, FIRMS thermal observations, and essential services. Only valid available scores are weighted; missing scores are excluded. A returnee is not automatically a verified person requiring every type of aid.</p>
+        <p><strong>Data context:</strong> IOM reporting date {joinedIom?.date??'not reported'}. Satellite and damage indicators cover different dates. Thermal observations and brightness changes do not independently confirm conflict damage or unmet humanitarian needs.</p>
+      </details>
+      <footer className="ton-aid-simple-footer"><ShieldAlert size={18}/><span>Research planning estimate, not an operational allocation or verified aid shortage. <Link to="/references"><BookOpen size={13}/> Sources & references</Link></span></footer>
+    </>}
+  </section>;
+}

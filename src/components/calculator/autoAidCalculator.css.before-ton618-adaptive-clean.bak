@@ -1,0 +1,25 @@
+.ton-aid-auto .ton-aid-auto-label{display:flex;gap:9px;align-items:center;color:#dcecf7;font-size:13px;font-weight:700;margin:6px 0 14px;flex-wrap:wrap}
+.ton-aid-auto .ton-aid-auto-meta{font-weight:500;color:#9bb9ce;margin-left:auto;font-size:11px}
+.ton-aid-auto-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ton-aid-auto-kpis>div{min-width:0;border:1px solid #35617a;border-radius:14px;padding:18px 15px;background:linear-gradient(160deg,#173a50,#0c263a);display:flex;flex-direction:column;gap:8px}
+.ton-aid-auto-kpis small{color:#acc5d5;font-size:11px;line-height:1.35}
+.ton-aid-auto-kpis strong{font-size:clamp(22px,2.6vw,33px);line-height:1.2;letter-spacing:-.04em;overflow-wrap:anywhere;color:#f1fbff}
+.ton-aid-auto-kpis span{font-size:11px;color:#9bb9cc;line-height:1.4}
+.ton-aid-auto-note{display:flex;gap:10px;align-items:start;border:1px solid #756743;background:#4c402421;padding:13px 15px;border-radius:12px;margin:14px 0;color:#d8d0b9}
+.ton-aid-auto-note svg{flex:0 0 auto;margin-top:2px}.ton-aid-auto-note p{font-size:12px;line-height:1.55;margin:0}
+.ton-aid-auto-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid #284962}
+.ton-aid-auto-row span{font-size:12px;color:#adc8d8;max-width:65%;line-height:1.5}.ton-aid-auto-row strong{font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
+.ton-aid-auto-row strong small{font-size:10px;color:#9bb9ce;font-weight:400}
+.ton-aid-auto-row:last-of-type{margin-bottom:14px}
+.ton-aid-auto .ton-aid-auto-signals{margin:14px 0}
+.ton-aid-auto-score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.ton-aid-auto-score>div{display:flex;flex-direction:column;gap:6px;background:#0b2437;border:1px solid #2b4f68;border-radius:12px;padding:15px}
+.ton-aid-auto-score small,.ton-aid-auto-score span{font-size:11px;color:#a9c4d5;line-height:1.5}
+.ton-aid-auto-score strong{font-size:23px;color:white}
+.ton-aid-auto-unmet{margin-top:14px}
+.ton-aid-auto-details{margin:16px 0;border:1px solid #2e536d;border-radius:12px;padding:14px 17px;background:#0b2539}
+.ton-aid-auto-details summary{display:flex;align-items:center;gap:9px;cursor:pointer;font-size:13px;font-weight:650;color:#d0e8f5}
+.ton-aid-auto-details summary::marker{color:#77cde9}
+.ton-aid-auto-details p{font-size:12px;color:#b7cddd;line-height:1.65}
+@media(max-width:1120px){.ton-aid-auto-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.ton-aid-auto-kpis,.ton-aid-auto-score{grid-template-columns:1fr}.ton-aid-auto .ton-aid-auto-meta{margin-left:0}.ton-aid-auto .ton-aid-auto-row span{max-width:55%}}

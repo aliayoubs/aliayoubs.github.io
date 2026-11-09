@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=(f)=>fs.readFileSync(f,'utf8');
+const calc=read('src/components/calculator/EvidenceAidCalculator.tsx');
+const map=read('src/components/map/IntelligenceMap.tsx');
+const panel=read('src/components/dashboard/UnifiedIntelligencePanel.tsx');
+const code=read('src/lib/aidAdaptiveFormula.ts');
+assert.match(calc,/adaptiveFactorAssessment\(factors\)/);
+assert.match(calc,/Formula for this area/);
+assert.match(calc,/No usable indicators/);
+assert.match(map,/TON618_ADAPTIVE_CLEAN_V1/);
+assert.match(map,/ton-map-attribution/);
+assert.match(map,/ton-evidence-map-legend/);
+assert.doesNotMatch(map,/No record does NOT mean no damage/);
+assert.match(panel,/Sources & reference/);
+assert.doesNotMatch(panel,/\{note && <p className="ton-unified-note">/);
+assert.match(code,/observedWeight/);
+console.log('PASS: adaptive calculator, concise map/panel, and mandatory map attribution verified.');

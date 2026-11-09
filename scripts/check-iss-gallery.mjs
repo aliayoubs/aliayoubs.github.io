@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const path=new URL('../src/data/issPhotos.ts',import.meta.url);
+const source=readFileSync(path,'utf8');
+const matches=[...source.matchAll(/\.\.\.record\('(ISS\d+)',(\d+)\),\s*id:'([^']+)'/g)];
+assert.equal(matches.length,10,'Expected 10 documented NASA photo references');
+const ids=matches.map(m=>`${m[1]}-E-${m[2]}`);
+assert.equal(new Set(ids).size,ids.length,'NASA photos must be unique');
+assert.ok(ids.includes('ISS053-E-50422'));
+assert.ok(ids.includes('ISS063-E-67994'));
+for(const id of ['ISS034-E-5808','ISS034-E-5809','ISS034-E-5810','ISS034-E-5811','ISS034-E-5812','ISS034-E-5813'])assert.ok(ids.includes(id),`${id} missing`);
+assert.ok(source.includes('https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/'));
+assert.ok(source.includes('https://eol.jsc.nasa.gov/SearchPhotos/photo.pl'));
+console.log(`PASS: ${matches.length} unique NASA astronaut photo records, metadata/source links and Lebanon NightPod series`);

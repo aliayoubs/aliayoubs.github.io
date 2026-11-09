@@ -1,0 +1,31 @@
+import { readFileSync } from 'node:fs';
+import assert from 'node:assert/strict';
+const undp=JSON.parse(readFileSync(new URL('../src/data/official/undpSouth2026.json',import.meta.url),'utf8'));
+const iom=JSON.parse(readFileSync(new URL('../src/data/official/iomRound119.json',import.meta.url),'utf8'));
+const sum=(items,key)=>items.reduce((acc,x)=>acc+x[key],0);
+assert.equal(iom.idps_by_current_district.length,24);
+assert.equal(iom.idps_by_district_of_origin.length,14);
+assert.equal(iom.returnees_by_district_of_return.length,12);
+assert.equal(iom.returnees_by_district_of_prior_displacement.length,18);
+assert.equal(sum(iom.idps_by_current_district,'idps'),304520);
+assert.equal(sum(iom.idps_by_district_of_origin,'idps_origin_estimate'),304520);
+assert.equal(sum(iom.returnees_by_district_of_return,'returned_idps_arrived'),964689);
+assert.equal(sum(iom.returnees_by_district_of_prior_displacement,'returned_idps_from_displacement'),964689);
+assert.equal(undp.top_ten_affected_cadastres.length,10);
+assert.equal(undp.governorates.length,2);
+assert.equal(undp.district_debris_cost_estimates.length,5);
+assert.equal(sum(undp.district_debris_cost_estimates,'estimated_damage_cost_usd'),3050134241);
+assert.equal(sum(undp.district_debris_cost_estimates,'debris_volume_m3'),7007132);
+assert.equal(undp.governorates.reduce((t,g)=>t+g.all_damaged_buildings,0),52284);
+assert.equal(undp.overall.assessed_buildings,167460);
+assert.equal(undp.overall.damaged_buildings_total,52284);
+assert.equal(undp.overall.previously_2024_damaged_excluded+undp.overall.cloud_obscured_excluded-undp.overall.overlap_in_exclusions+undp.overall.assessed_buildings,undp.overall.study_area_building_footprints);
+assert.equal(iom.national_summary.idps_current,304520);
+assert.equal(iom.national_summary.returnees_begun_returning,964689);
+for(const d of ['Bent Jbeil','Marjaayoun','Sour']){
+ assert.ok(iom.idps_by_current_district.find(row=>row.district===d));
+ assert.ok(iom.idps_by_district_of_origin.find(row=>row.district===d));
+ assert.ok(iom.returnees_by_district_of_return.find(row=>row.district===d));
+ assert.ok(undp.district_debris_cost_estimates.find(row=>row.district===d));
+}
+console.log('PASS: IOM 24/14/12/18 district tables, both national totals, UNDP damage/debris/cost totals, and 10 study cadastres.');

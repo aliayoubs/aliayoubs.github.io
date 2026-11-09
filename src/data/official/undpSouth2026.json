@@ -1,0 +1,324 @@
+{
+  "source": {
+    "title": "Building-Level Damage Assessment: South Lebanon (issue no. 2) | GeoAI-based Rapid Assessment",
+    "publisher": "United Nations Development Programme (UNDP); factsheet displays CNRS and UNDP logos",
+    "publication_date": "2026-07",
+    "source_file": "south_bldg_level_damage_factsheet_issue_no_2(2).pdf",
+    "pages": 1,
+    "publication_series_note": "Third publication in UNDP building damage assessment series after Beirut/Mount Lebanon and initial South Lebanon",
+    "geography": "Primarily south of the Litani River, plus limited cadastral areas north of the river",
+    "baseline_satellite_date": "2025-10-23",
+    "comparison_satellite_date": "2026-06-16",
+    "alternate_workflow_heading": "23 October 2025 to 16/20 June 2026",
+    "previous_south_assessment_image_date": "2026-04-29",
+    "status": "preliminary, office-validated only; not field-verified"
+  },
+  "overall": {
+    "study_area_building_footprints": 183018,
+    "previously_2024_damaged_excluded": 12129,
+    "cloud_obscured_excluded": 3596,
+    "overlap_in_exclusions": 167,
+    "assessed_buildings": 167460,
+    "damaged_buildings_total": 52284,
+    "assessed_buildings_damaged_pct_published": 31.2,
+    "destroyed_buildings": 24068,
+    "partially_damaged_buildings": 7191,
+    "minor_damage_buildings": 21025,
+    "destroyed_units": 36139,
+    "partially_damaged_units": 11511,
+    "minor_damage_units": 32949,
+    "total_debris_volume_m3": 7007132,
+    "debris_weight_low_density_t": 11842055,
+    "debris_weight_high_density_t": 15766047,
+    "damage_cost_usd": 3050134241,
+    "el_nabatieh_share_of_destroyed_pct_reported": 85
+  },
+  "classification": [
+    {
+      "status": "destroyed",
+      "damage_coefficient_pct": 100,
+      "description": "Complete structural collapse",
+      "map_color": "dark red / dark amethyst"
+    },
+    {
+      "status": "partially_damaged",
+      "damage_coefficient_pct": 50,
+      "description": "Compromised load-bearing stability and partial collapse",
+      "map_color": "red"
+    },
+    {
+      "status": "minor_damage",
+      "damage_coefficient_pct": 10,
+      "description": "Limited and non-significant damage",
+      "map_color": "yellow"
+    }
+  ],
+  "governorates": [
+    {
+      "governorate": "El Nabatieh",
+      "destroyed_buildings": 20568,
+      "destroyed_units": 30122,
+      "partially_damaged_buildings": 4790,
+      "partially_damaged_units": 5903,
+      "minor_damage_buildings": 12407,
+      "minor_damage_units": 15461,
+      "all_damaged_buildings": 37765,
+      "all_damaged_units": 51486
+    },
+    {
+      "governorate": "South",
+      "destroyed_buildings": 3500,
+      "destroyed_units": 6017,
+      "partially_damaged_buildings": 2401,
+      "partially_damaged_units": 5608,
+      "minor_damage_buildings": 8618,
+      "minor_damage_units": 17488,
+      "all_damaged_buildings": 14519,
+      "all_damaged_units": 29113
+    }
+  ],
+  "top_ten_affected_cadastres": [
+    {
+      "rank": 1,
+      "cadastre_name_as_published": "Bent Jbayl",
+      "district": "Bent Jbeil",
+      "affected_buildings": 2712,
+      "affected_building_stock_pct": 77.6,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 2,
+      "cadastre_name_as_published": "Aaintaroun",
+      "district": "Bent Jbeil",
+      "affected_buildings": 2528,
+      "affected_building_stock_pct": 91.4,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 3,
+      "cadastre_name_as_published": "Meiss Ej-Jabal",
+      "district": "Marjaayoun",
+      "affected_buildings": 2507,
+      "affected_building_stock_pct": 74.4,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 4,
+      "cadastre_name_as_published": "Blida",
+      "district": "Marjaayoun",
+      "affected_buildings": 1495,
+      "affected_building_stock_pct": 87.1,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 5,
+      "cadastre_name_as_published": "Taybet Matjaayoun",
+      "district": "Marjaayoun",
+      "affected_buildings": 1426,
+      "affected_building_stock_pct": 69.1,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 6,
+      "cadastre_name_as_published": "Aaynata Bent Jbayl",
+      "district": "Bent Jbeil",
+      "affected_buildings": 1285,
+      "affected_building_stock_pct": 78.6,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 7,
+      "cadastre_name_as_published": "Aayta Ech-Chaab",
+      "district": "Bent Jbeil",
+      "affected_buildings": 1276,
+      "affected_building_stock_pct": 89.6,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 8,
+      "cadastre_name_as_published": "Kfar Kila",
+      "district": "Marjaayoun",
+      "affected_buildings": 1233,
+      "affected_building_stock_pct": 92.7,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 9,
+      "cadastre_name_as_published": "Sour",
+      "district": "Sour",
+      "affected_buildings": 867,
+      "affected_building_stock_pct": 10.6,
+      "satellite_coverage_pct": 100
+    },
+    {
+      "rank": 10,
+      "cadastre_name_as_published": "Chaqra",
+      "district": "Bent Jbeil",
+      "affected_buildings": 864,
+      "affected_building_stock_pct": 26.4,
+      "satellite_coverage_pct": 100
+    }
+  ],
+  "district_debris_cost_estimates": [
+    {
+      "governorate": "El Nabatieh",
+      "district": "Bent Jbeil",
+      "debris_volume_m3": 3110184,
+      "debris_weight_low_density_t": 5256211,
+      "debris_weight_high_density_t": 6997913,
+      "estimated_damage_cost_usd": 1373667840
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Marjaayoun",
+      "debris_volume_m3": 1851462,
+      "debris_weight_low_density_t": 3128972,
+      "debris_weight_high_density_t": 4165790,
+      "estimated_damage_cost_usd": 769447015
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "El Nabatieh",
+      "debris_volume_m3": 459323,
+      "debris_weight_low_density_t": 776257,
+      "debris_weight_high_density_t": 1033478,
+      "estimated_damage_cost_usd": 193507859
+    },
+    {
+      "governorate": "South",
+      "district": "Sour",
+      "debris_volume_m3": 1558068,
+      "debris_weight_low_density_t": 2633134,
+      "debris_weight_high_density_t": 3505652,
+      "estimated_damage_cost_usd": 701861801
+    },
+    {
+      "governorate": "South",
+      "district": "Saida",
+      "debris_volume_m3": 28095,
+      "debris_weight_low_density_t": 47481,
+      "debris_weight_high_density_t": 63214,
+      "estimated_damage_cost_usd": 11649726
+    }
+  ],
+  "district_damage_cost_totals_usd": {
+    "El Nabatieh": 2336622714,
+    "South": 713511527
+  },
+  "imagery_coverage": {
+    "cadastres_total": 163,
+    "cadastres_full_coverage": 143,
+    "cadastres_partial_coverage": 20,
+    "assessed_buildings_with_complete_footprint_coverage_pct": 92.4,
+    "named_partial_coverage_cadastres": [
+      {
+        "cadastre": "Khayayeb Saida",
+        "mean_coverage_pct": 2
+      },
+      {
+        "cadastre": "Aabba",
+        "mean_coverage_pct": 7
+      },
+      {
+        "cadastre": "Jibchit",
+        "mean_coverage_pct": 12
+      },
+      {
+        "cadastre": "Matariyet Ech-Choumar",
+        "mean_coverage_pct": 12
+      },
+      {
+        "cadastre": "Marjaayoun town",
+        "mean_coverage_pct": 13
+      },
+      {
+        "cadastre": "Nabatiyeh El-Faouka",
+        "mean_coverage_pct": 17
+      },
+      {
+        "cadastre": "Kfar Tibnit",
+        "mean_coverage_pct": 31
+      },
+      {
+        "cadastre": "Zrariyeh",
+        "mean_coverage_pct": 47
+      },
+      {
+        "cadastre": "Khiyam",
+        "mean_coverage_pct": 53
+      },
+      {
+        "cadastre": "Aamra",
+        "mean_coverage_pct": 53
+      }
+    ]
+  },
+  "methodology": {
+    "steps": [
+      "Compare optical satellite imagery from October 2025 and June 2026",
+      "GeoAI/deep-learning segmentation",
+      "Building footprint and administrative boundary overlay",
+      "UNDP office-based expert visual interpretation",
+      "Damage, debris and replacement-cost estimation"
+    ],
+    "detected_indicators": [
+      "roof collapse",
+      "structural deformation",
+      "debris accumulation"
+    ],
+    "ground_truth": "No field validation at publication",
+    "floor_count_source": "European Commission Global Human Settlement dataset",
+    "unit_estimation_apartment_area_m2_approx": 150,
+    "debris_material_density_low_t_per_m3": 1.69,
+    "debris_material_density_high_t_per_m3": 2.25,
+    "debris_density_references": [
+      "UNDP and ESCWA (2025)",
+      "Tamraz, Srour and Chehab (2012)"
+    ],
+    "replacement_cost_baseline_usd_per_m2": 450,
+    "minor_damage_in_debris_calculations": false,
+    "minor_damage_in_damage_cost_calculations": false
+  },
+  "map": {
+    "title": "Buildings Affected by Damage Status — South Lebanon",
+    "legend": [
+      "Destroyed",
+      "Partially damaged",
+      "Minor damage",
+      "District boundaries",
+      "Cadastre boundaries"
+    ],
+    "visualization_note": "Original map colors red/orange/yellow changed to dark amethyst/red/yellow in current publication",
+    "credits_summary": "Esri, Vantor, Earthstar Geographics, GIS User Community, United Nations Geospatial (basemap); standard UN boundary disclaimer"
+  },
+  "limitations": [
+    "The assessment excludes buildings identified as damaged during the 2024 conflict; results are not cumulative with 2024 damages.",
+    "Cloud-obscured buildings are excluded and 20 of 163 cadastres have incomplete coverage.",
+    "Basements and other underground structures are not assessed; damage may be underestimated.",
+    "Roads, bridges, electricity, water systems, and telecommunications infrastructure are outside scope.",
+    "Building types (residential, commercial, industrial) are not distinguished clearly.",
+    "Dense buildings, narrow streets and shadows can reduce identification/classification accuracy.",
+    "Damage, repair or other changes between acquisition dates may not be visible.",
+    "This is a snapshot, not a live update on damage, debris clearance or reconstruction.",
+    "Office-based visual interpretation only; UNDSS and Lebanese Armed Forces validation was waived, and no independent ground truth or on-site field verification was done.",
+    "Figures are preliminary, intended for programming, and pending field-based validation.",
+    "The source map is a static depiction and is not itself a downloadable per-building geospatial dataset."
+  ],
+  "ton618_usage": {
+    "appropriate": [
+      "Display published aggregate building-damage counts and shares",
+      "Compare the ten most-affected published cadastres",
+      "Show district-level debris volumes and estimated repair/replacement costs",
+      "Use known imagery dates and coverage flags",
+      "Show the methodology and confidence limitations"
+    ],
+    "not_supplied": [
+      "Building coordinates, building polygons or downloadable geospatial layer",
+      "Destroyed/partial/minor category counts by individual cadastre",
+      "Individual cadastre debris tonnage or cost",
+      "Population counts, displaced persons or household size",
+      "Current humanitarian aid supply, actual unmet needs or Sphere-based aid totals",
+      "Per-building dates, causes or ongoing live damage updates"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const d=JSON.parse(readFileSync(new URL('../public/data/blackMarblePublishedFindings.json',import.meta.url),'utf8'));
+assert.equal(d.articles.length,2);
+assert.equal(d.articles[0].sample_areas,376);
+assert.equal(d.articles[0].period_before,'2025-09');
+assert.equal(d.articles[0].period_after,'2026-09');
+assert.equal(d.articles[1].last_updated,'2026-11-05');
+assert.deepEqual(d.distance_bands.map(x=>x.change_percent),[-32,-45,-23,3]);
+assert.deepEqual(d.village_examples.map(x=>x.display),['More than 99% decrease','More than 99% decrease','More than 99% decrease','76% decrease']);
+assert.ok(d.village_examples.slice(0,3).every(x=>x.comparison_operator==='>' && x.percent===undefined));
+assert.equal(d.village_examples[0].community_id,'bint-jbeil');
+assert.equal(d.village_examples[1].community_id,'aynata-bint-jbeil');
+assert.ok(d.articles[0].url.includes('aaber.net'));
+assert.ok(d.articles[1].url.includes('datapartnership.org'));
+assert.ok(d.world_bank_findings.every(x=>!Object.hasOwn(x,'percent')));
+console.log('PASS published Black Marble source data: 2 studies, 4 distance bands, 4 location examples, 4 World Bank qualitative findings.');

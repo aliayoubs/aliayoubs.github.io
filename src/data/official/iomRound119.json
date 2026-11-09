@@ -1,0 +1,1046 @@
+{
+  "metadata": {
+    "title": "Displacement Tracking Matrix — Lebanon | Mobility Snapshot — Round 119",
+    "publisher": "International Organization for Migration (IOM), Lebanon",
+    "program": "Displacement Tracking Matrix (DTM), Mobility Tracking",
+    "round": 119,
+    "report_production_date": "2026-10-29",
+    "observation_as_of": "2026-10-28",
+    "data_collected_start": "2026-10-26",
+    "data_collected_end": "2026-10-28",
+    "comparison_date": "2026-09-29",
+    "document_pages": 7,
+    "required_source_citation": "International Organization for Migration (IOM), October 2026. DTM Mobility Snapshot, Round 119, IOM Lebanon",
+    "websites": [
+      "https://dtm.iom.int/lebanon",
+      "https://www.iom.int/countries/lebanon"
+    ],
+    "contact": "dtmlebanon@iom.int",
+    "source_file": "Mobility Tracking Round 119 – 29‑10‑2026.pdf",
+    "notes": "All figures from the uploaded PDF. District-level statistics must NOT be attached to individual villages. Sex/age chart uses a separate May 2026 survey and is not representative for each location."
+  },
+  "national_summary": {
+    "idps_current": 304520,
+    "idps_change_since_2026_09_29_pct": -8,
+    "idps_female_share_pct": 53,
+    "idps_male_share_pct": 47,
+    "returnees_begun_returning": 964689,
+    "returnees_change_since_2026_09_29_pct": 10,
+    "registered_idps_in_collective_sites": 11210,
+    "registered_sites": 138,
+    "collective_sites_change_since_2026_09_29_pct": -21,
+    "districts_reporting_idp_arrival": 24,
+    "districts_reporting_idp_arrival_change": -1,
+    "districts_reporting_idp_departure": 14,
+    "districts_reporting_idp_departure_change": 0,
+    "cadastres_hosting_idps": 528,
+    "districts_reporting_idp_returns": 12,
+    "districts_reporting_idp_returns_change": 0,
+    "districts_reporting_returnee_departures": 18,
+    "districts_reporting_returnee_departures_change": 0,
+    "source_page": 1,
+    "returnee_count_source_page": 4,
+    "notes": "IDPs count and begun-returning count represent different mobility stocks/flows, not simply subtracted or interpreted as validated safe home occupancy."
+  },
+  "idps_by_current_district": [
+    {
+      "governorate": "Beirut",
+      "district": "Beirut",
+      "idps": 83947,
+      "change_vs_round_118": -6632,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Saida",
+      "idps": 55000,
+      "change_vs_round_118": -5521,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Sour",
+      "idps": 49015,
+      "change_vs_round_118": 1859,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Chouf",
+      "idps": 30373,
+      "change_vs_round_118": -3098,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "El Nabatieh",
+      "idps": 28246,
+      "change_vs_round_118": 4581,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Aley",
+      "idps": 20928,
+      "change_vs_round_118": -6266,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Bent Jbeil",
+      "idps": 6545,
+      "change_vs_round_118": 349,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Baabda",
+      "idps": 5860,
+      "change_vs_round_118": -2366,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "El Meten",
+      "idps": 3939,
+      "change_vs_round_118": -1402,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "Zahle",
+      "idps": 3801,
+      "change_vs_round_118": -94,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "Baalbek",
+      "idps": 3588,
+      "change_vs_round_118": -1886,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Jezzine",
+      "idps": 2380,
+      "change_vs_round_118": -756,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Hasbaya",
+      "idps": 2331,
+      "change_vs_round_118": 446,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Jbeil",
+      "idps": 1923,
+      "change_vs_round_118": -2242,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "El Hermel",
+      "idps": 1169,
+      "change_vs_round_118": -598,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Marjaayoun",
+      "idps": 1134,
+      "change_vs_round_118": 100,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Kesrwane",
+      "idps": 1072,
+      "change_vs_round_118": -401,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Akkar",
+      "district": "Akkar",
+      "idps": 746,
+      "change_vs_round_118": -314,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "El Minieh-Dennie",
+      "idps": 592,
+      "change_vs_round_118": -132,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "West Bekaa",
+      "idps": 575,
+      "change_vs_round_118": -52,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "Rachaya",
+      "idps": 515,
+      "change_vs_round_118": -38,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "El Batroun",
+      "idps": 304,
+      "change_vs_round_118": -396,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "El Koura",
+      "idps": 289,
+      "change_vs_round_118": -260,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "Tripoli",
+      "idps": 248,
+      "change_vs_round_118": 23,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by current location",
+      "note": "These IDPs are located in this district; this is not their district of origin."
+    }
+  ],
+  "idps_by_district_of_origin": [
+    {
+      "governorate": "El Nabatieh",
+      "district": "Bent Jbeil",
+      "idps_origin_estimate": 95056,
+      "change_vs_round_118": 5642,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "El Nabatieh",
+      "idps_origin_estimate": 75229,
+      "change_vs_round_118": -7425,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "South",
+      "district": "Sour",
+      "idps_origin_estimate": 63870,
+      "change_vs_round_118": -8404,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Marjaayoun",
+      "idps_origin_estimate": 30908,
+      "change_vs_round_118": -6700,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Baabda",
+      "idps_origin_estimate": 24881,
+      "change_vs_round_118": -2689,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "Baalbek",
+      "idps_origin_estimate": 4098,
+      "change_vs_round_118": -893,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "West Bekaa",
+      "idps_origin_estimate": 3878,
+      "change_vs_round_118": -1015,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Hasbaya",
+      "idps_origin_estimate": 3415,
+      "change_vs_round_118": 1439,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "South",
+      "district": "Saida",
+      "idps_origin_estimate": 2833,
+      "change_vs_round_118": -4882,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Beirut",
+      "district": "Beirut",
+      "idps_origin_estimate": 236,
+      "change_vs_round_118": -28,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "El Hermel",
+      "idps_origin_estimate": 43,
+      "change_vs_round_118": -18,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "Zahle",
+      "idps_origin_estimate": 41,
+      "change_vs_round_118": -198,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "South",
+      "district": "Jezzine",
+      "idps_origin_estimate": 23,
+      "change_vs_round_118": 5,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Aley",
+      "idps_origin_estimate": 9,
+      "change_vs_round_118": 0,
+      "source_page": 2,
+      "geography": "district",
+      "measurement": "current displaced people by district they originally left",
+      "note": "IOM states origin figures are projections from estimates of IDPs living outside sites."
+    }
+  ],
+  "returnees_by_district_of_return": [
+    {
+      "governorate": "South",
+      "district": "Sour",
+      "returned_idps_arrived": 312874,
+      "change_vs_round_118": 38102,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "El Nabatieh",
+      "returned_idps_arrived": 269491,
+      "change_vs_round_118": 41423,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Baabda",
+      "returned_idps_arrived": 133590,
+      "change_vs_round_118": 5000,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "South",
+      "district": "Saida",
+      "returned_idps_arrived": 86907,
+      "change_vs_round_118": -2078,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "Baalbek",
+      "returned_idps_arrived": 48042,
+      "change_vs_round_118": 2279,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Bent Jbeil",
+      "returned_idps_arrived": 44481,
+      "change_vs_round_118": 3910,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Aley",
+      "returned_idps_arrived": 28000,
+      "change_vs_round_118": 0,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "West Bekaa",
+      "returned_idps_arrived": 20830,
+      "change_vs_round_118": 5024,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Marjaayoun",
+      "returned_idps_arrived": 13620,
+      "change_vs_round_118": 1389,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "South",
+      "district": "Jezzine",
+      "returned_idps_arrived": 3221,
+      "change_vs_round_118": -7563,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Hasbaya",
+      "returned_idps_arrived": 3183,
+      "change_vs_round_118": 0,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "Zahle",
+      "returned_idps_arrived": 450,
+      "change_vs_round_118": 0,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, destination of return",
+      "note": "This is the district the person is returning to, not guaranteed safe or completed return."
+    }
+  ],
+  "returnees_by_district_of_prior_displacement": [
+    {
+      "governorate": "Beirut",
+      "district": "Beirut",
+      "returned_idps_from_displacement": 494749,
+      "change_vs_round_118": 27074,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Saida",
+      "returned_idps_from_displacement": 107856,
+      "change_vs_round_118": 4342,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Aley",
+      "returned_idps_from_displacement": 85965,
+      "change_vs_round_118": 18225,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "Tripoli",
+      "returned_idps_from_displacement": 72333,
+      "change_vs_round_118": 14476,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Akkar",
+      "district": "Akkar",
+      "returned_idps_from_displacement": 51424,
+      "change_vs_round_118": 15038,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "Zahle",
+      "returned_idps_from_displacement": 35027,
+      "change_vs_round_118": -3364,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Chouf",
+      "returned_idps_from_displacement": 31760,
+      "change_vs_round_118": -3524,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Bekaa",
+      "district": "West Bekaa",
+      "returned_idps_from_displacement": 27630,
+      "change_vs_round_118": 4016,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Jbeil",
+      "returned_idps_from_displacement": 26347,
+      "change_vs_round_118": -1770,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "district": "Baalbek",
+      "returned_idps_from_displacement": 6436,
+      "change_vs_round_118": 2025,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Sour",
+      "returned_idps_from_displacement": 6300,
+      "change_vs_round_118": 6300,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "El Meten",
+      "returned_idps_from_displacement": 5309,
+      "change_vs_round_118": 0,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "El Batroun",
+      "returned_idps_from_displacement": 4905,
+      "change_vs_round_118": 972,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Baabda",
+      "returned_idps_from_displacement": 4415,
+      "change_vs_round_118": 2078,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "El Nabatieh",
+      "district": "Hasbaya",
+      "returned_idps_from_displacement": 1575,
+      "change_vs_round_118": 1260,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "South",
+      "district": "Jezzine",
+      "returned_idps_from_displacement": 1449,
+      "change_vs_round_118": 91,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "district": "Kesrwane",
+      "returned_idps_from_displacement": 1164,
+      "change_vs_round_118": 270,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    },
+    {
+      "governorate": "North",
+      "district": "Zgharta",
+      "returned_idps_from_displacement": 45,
+      "change_vs_round_118": 0,
+      "source_page": 5,
+      "geography": "district",
+      "measurement": "people who began returning, district they departed",
+      "note": "This is the location the returnee left, not necessarily their place of origin."
+    }
+  ],
+  "housing_by_governorate": [
+    {
+      "governorate": "Bekaa",
+      "with_host_co_living_pct": "2",
+      "with_host_living_separately_pct": "1",
+      "second_house_pct": "1",
+      "renting_pct": "90",
+      "collective_sites_pct": "6",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    },
+    {
+      "governorate": "Baalbek-El Hermel",
+      "with_host_co_living_pct": "25",
+      "with_host_living_separately_pct": "21",
+      "second_house_pct": "6",
+      "renting_pct": "48",
+      "collective_sites_pct": "0",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    },
+    {
+      "governorate": "Beirut",
+      "with_host_co_living_pct": "1",
+      "with_host_living_separately_pct": "0",
+      "second_house_pct": "32",
+      "renting_pct": "63",
+      "collective_sites_pct": "4",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    },
+    {
+      "governorate": "El Nabatieh",
+      "with_host_co_living_pct": "0",
+      "with_host_living_separately_pct": "0",
+      "second_house_pct": "0",
+      "renting_pct": "98",
+      "collective_sites_pct": "2",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    },
+    {
+      "governorate": "Mount Lebanon",
+      "with_host_co_living_pct": "2",
+      "with_host_living_separately_pct": "1",
+      "second_house_pct": "6",
+      "renting_pct": "84",
+      "collective_sites_pct": "6",
+      "at_risk_shelter_pct": "1",
+      "source_page": 7
+    },
+    {
+      "governorate": "North",
+      "with_host_co_living_pct": "6",
+      "with_host_living_separately_pct": "0",
+      "second_house_pct": "0",
+      "renting_pct": "89",
+      "collective_sites_pct": "5",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    },
+    {
+      "governorate": "South",
+      "with_host_co_living_pct": "7",
+      "with_host_living_separately_pct": "4",
+      "second_house_pct": "0",
+      "renting_pct": "86",
+      "collective_sites_pct": "3",
+      "at_risk_shelter_pct": "<1",
+      "source_page": 7
+    },
+    {
+      "governorate": "Akkar",
+      "with_host_co_living_pct": "2",
+      "with_host_living_separately_pct": "1",
+      "second_house_pct": "10",
+      "renting_pct": "76",
+      "collective_sites_pct": "11",
+      "at_risk_shelter_pct": "0",
+      "source_page": 7
+    }
+  ],
+  "demographics_round_100_may_2026": [
+    {
+      "age_band": "Over 58",
+      "male_pct": 7,
+      "female_pct": 7,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    },
+    {
+      "age_band": "19–57",
+      "male_pct": 24,
+      "female_pct": 29,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    },
+    {
+      "age_band": "13–18",
+      "male_pct": 5,
+      "female_pct": 6,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    },
+    {
+      "age_band": "6–12",
+      "male_pct": 7,
+      "female_pct": 7,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    },
+    {
+      "age_band": "3–5",
+      "male_pct": 3,
+      "female_pct": 3,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    },
+    {
+      "age_band": "0–2",
+      "male_pct": 1,
+      "female_pct": 1,
+      "unit": "percentage points of whole sample",
+      "survey_round": 100,
+      "survey_date": "2026-05-25",
+      "source_page": 7
+    }
+  ],
+  "published_interpretation_and_flow_figures": {
+    "page_2": {
+      "five_largest_displacement_host_districts": [
+        "Beirut",
+        "Saida",
+        "Sour",
+        "Chouf",
+        "El Nabatieh"
+      ],
+      "share_of_current_idps_in_top_five_pct": 81,
+      "five_largest_origin_districts": [
+        "Bent Jbeil",
+        "El Nabatieh",
+        "Sour",
+        "Marjaayoun",
+        "Baabda"
+      ],
+      "share_of_current_idps_from_top_five_origin_districts_pct": 95,
+      "bent_jbeil_share_of_current_idp_origins_pct": 31,
+      "named_destination_shares_pct": {
+        "Beirut": 28,
+        "Saida": 18,
+        "Sour": 16,
+        "Chouf": 10,
+        "El Nabatieh": 9
+      },
+      "named_origin_shares_pct": {
+        "Bent Jbeil": 31,
+        "El Nabatieh": 25,
+        "Sour": 21,
+        "Marjaayoun": 10,
+        "Baabda": 8
+      }
+    },
+    "page_3": {
+      "idps_remaining_within_governorate_of_origin_pct": 27,
+      "idps_displaced_across_governorate_borders_pct": 73,
+      "south_origin_intra_governorate_pct": 56,
+      "south_origin_intra_governorate_idps": 37367,
+      "el_nabatieh_origin_cross_governorate_pct": 81,
+      "mount_lebanon_origin_people": 24890,
+      "mount_lebanon_origin_cross_governorate_pct": 74,
+      "note": "Cross-governorate movement refers to relocation from a different governorate, not international displacement."
+    },
+    "page_4": {
+      "returned_idps_begun_returning": 964689,
+      "changed_from_previous_round_pct": 10,
+      "districts_receiving_returnees": 12,
+      "districts_from_which_returnees_departed": 18
+    },
+    "page_5": {
+      "returned_idps_share_arriving_five_main_districts_pct": 88,
+      "main_return_destinations_share_pct": {
+        "Sour": 32,
+        "El Nabatieh": 28,
+        "Baabda": 14,
+        "Saida": 9,
+        "Baalbek": 5
+      },
+      "main_return_departures_share_pct": {
+        "Beirut": 51,
+        "Saida": 11,
+        "Aley": 9,
+        "Tripoli": 7,
+        "Akkar": 5
+      },
+      "share_departures_main_five_pct": 83,
+      "note": "Return arrival is where returnees go; return departure is where they had previously been displaced."
+    },
+    "page_6": {
+      "return_movements_within_same_governorate_pct": 20,
+      "return_movements_from_different_governorate_pct": 80,
+      "returned_from_beirut_number": 494749,
+      "returned_from_beirut_share_pct": 51,
+      "returned_to_mount_lebanon_number": 161590,
+      "returned_to_mount_lebanon_from_other_governorate_pct": 73,
+      "returned_to_south_number": 403002,
+      "returned_to_south_share_pct": 42,
+      "returned_to_south_from_other_governorate_pct": 71,
+      "note": "Flow figures describe internal displacement movement, not international migration or service restoration."
+    },
+    "page_7": {
+      "housing_distribution_national_pct": {
+        "co_living_with_host": 4,
+        "living_separately_in_host_setting": 2,
+        "second_home": 10,
+        "renting": 80,
+        "collective_sites": 4,
+        "at_risk_shelter": "<1"
+      },
+      "host_setting_population_count_co_living": 12167,
+      "host_setting_population_count_living_without_host": 6527,
+      "host_setting_overcrowding": "Key informants perceive overcrowding in host settings",
+      "at_risk_shelter_definition": [
+        "unfinished buildings",
+        "tents",
+        "parks",
+        "streets",
+        "self-settled sites"
+      ],
+      "demographics_caveat": "Demographic graphic taken from Round 100 (25 May 2026), convenience sample of 9,578 interviews, about two households per covered location; not representative of sex/age distribution at each location.",
+      "current_2026_mobility_collection": "Remote data collection via over 45 enumerators and 1,450 key informants",
+      "methodology_name": "DTM Global Methodological Framework"
+    }
+  },
+  "chart_coverage_notes": {
+    "page_1_current_idps_chart": {
+      "plot_date_range": "March to October 2026",
+      "largest_explicit_label_visible": 1208869,
+      "first_explicit_label_visible": 335447,
+      "final_value": 304520,
+      "interpretation": "Selected point labels from the image; no complete tabular time series in the report."
+    },
+    "page_4_returns_chart": {
+      "plot_date_range": "March to October 2026",
+      "final_value": 964689,
+      "interpretation": "Selected point labels from the image; no complete tabular time series in the report."
+    }
+  },
+  "methodology_and_caveats": [
+    "Displacement data collected remotely between 26 and 28 October 2026 using 45+ enumerators and about 1,450 key informants.",
+    "Key informants include municipal officials, mukhtars, community representatives, neighbourhood focal points.",
+    "Collective-site figures are sourced from Disaster Risk Management (DRM) and Lebanese Red Cross (LRC) registration, accessed 28 October 2026 at noon.",
+    "DRM/LRC is household-level registration for direct assistance; IOM mobility tracking is an estimate for preparedness/resource mobilization.",
+    "Origin district figures are projections based on estimated IDPs living outside collective sites.",
+    "May 2026 Round 100 demographic chart is not representative at district or cadastral level.",
+    "IOM map boundaries are illustrative and do not imply official endorsement.",
+    "Only aggregate data is in the report; it does not report village/cadastre-specific caseloads for the 10 TON618 study locations.",
+    "Do not subtract returns from current IDPs to infer unmet needs or population resident in a village; return does not equal damage repair.",
+    "All figure percentages as published may be rounded; <1% is a threshold label, not an exact number."
+  ],
+  "ton618_website_integration": {
+    "purpose": "Use district-scale displacement and return figures as supplemental context to UNDP cadastral building damage data in TON618.",
+    "ten_villages_have_displacement_data_in_this_pdf": false,
+    "suggested_join_key": "district (with governorate where needed); never join district totals to individual villages as village measurements",
+    "site_mapping": {
+      "Bent Jbeil district": [
+        "Bint Jbeil",
+        "Aitaroun",
+        "Aita al-Shaab",
+        "Aaynata",
+        "Chaqra"
+      ],
+      "Marjaayoun district": [
+        "Meiss el-Jabal",
+        "Blida",
+        "Taybet Marjaayoun",
+        "Kfar Kila"
+      ],
+      "Sour district": [
+        "Tyre/Sour"
+      ]
+    },
+    "verification_needed": "Check each mapped village/cadastre against matching administrative boundary identifiers if making geospatial joins.",
+    "damage_dataset_comparison": "UNDP damage snapshot uses imagery through June 2026; IOM displacement snapshot is dated October 2026. They represent different observation times.",
+    "no_unmet_aid_shortage_in_pdf": true,
+    "recommended_ui_labels": {
+      "idp_origin": "IDPs originally from district",
+      "idp_destination": "IDPs currently hosted in district",
+      "return_destination": "Returnees arriving in district",
+      "return_origin_of_movement": "Returnees leaving a displacement district",
+      "available_by": "District-level IOM DTM report (not village-specific)"
+    },
+    "sources_available": [
+      "IOM DTM Round 119",
+      "UNDP South Lebanon damage assessment July 2026"
+    ],
+    "next_data_needed": [
+      "cadastre-level displaced/returning population",
+      "village total population",
+      "household counts",
+      "current access to food/water/shelter",
+      "actual available humanitarian stocks"
+    ]
+  }
+}

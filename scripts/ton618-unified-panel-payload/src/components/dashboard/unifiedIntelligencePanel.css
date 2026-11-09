@@ -1,0 +1,38 @@
+/* TON 618 — consistent district and village intelligence cards. No data or map style overrides. */
+.ton-evidence-dashboard .ton-unified-panel{background:#071926;border:0;box-shadow:none;color:#e8f6fc;min-height:0;overflow:visible;max-height:none}
+.ton-unified-intro{padding:23px 22px 21px;background:linear-gradient(130deg,#132f43,#091c2b);border-bottom:1px solid #294a5d}
+.ton-unified-eyebrow{display:block;color:#6fe1ed;letter-spacing:1.6px;font-size:10px;font-weight:800;margin-bottom:14px}
+.ton-unified-intro h2{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px;color:#f5fbff;font-size:clamp(21px,2vw,27px);line-height:1.2;overflow-wrap:anywhere}
+.ton-unified-intro h2 svg{flex:none;margin-top:4px;color:#6fe1ed}
+.ton-unified-intro p{font-size:12px;color:#a2c1d0;margin:0 0 10px;line-height:1.5}
+.ton-unified-pcode{display:inline-block;padding:6px 9px;border:1px solid #2c5b70;background:#0a2637;border-radius:6px;color:#a5c8d8;font:600 10px ui-monospace,Menlo,monospace}
+.ton-unified-body{display:grid;gap:15px;padding:17px 14px 24px}
+.ton-unified-section{background:#0c2536;border:1px solid #28485b;border-radius:11px;overflow:hidden}
+.ton-unified-section-header{display:flex;gap:10px;align-items:center;padding:13px 14px;background:#102f43;border-bottom:1px solid #274c61}
+.ton-unified-section-icon{width:28px;height:28px;border-radius:8px;background:#164658;color:#78e5f4;display:grid;place-items:center;flex:none}
+.ton-unified-section-header h3{font-size:13px;color:#f0faff;margin:0;font-weight:750;flex:1}
+.ton-unified-index{font:700 11px ui-monospace,Menlo,monospace;color:#6abfd2}
+.ton-unified-metrics{display:grid}
+.ton-unified-metric{padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid rgba(70,114,137,.32)}
+.ton-unified-metric:last-child{border-bottom:0}
+.ton-unified-metric-copy{min-width:0;flex:1;display:grid;gap:4px}
+.ton-unified-metric-copy>span{font-size:12px;line-height:1.35;color:#cfe6f0;font-weight:580}
+.ton-unified-metric-copy>small{font-size:10px;line-height:1.4;color:#90adbd}
+.ton-unified-metric>strong{font-size:15px;font-weight:780;line-height:1.25;text-align:right;min-width:75px;max-width:52%;overflow-wrap:break-word;font-variant-numeric:tabular-nums;color:#fff}
+.ton-unified-metric.is-unavailable>strong{font-size:11px;font-weight:580;color:#9ab6c4;max-width:45%}
+.ton-unified-note{margin:0;border-top:1px solid #224052;background:#0a2030;padding:11px 14px;font-size:10px;line-height:1.55;color:#9bb7c5}
+.ton-unified-warning{margin:0;padding:11px;border:1px solid #86683d;border-radius:8px;color:#f1d0a7;font-size:11px;line-height:1.5;background:#2d241e}
+.ton-unified-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.ton-unified-actions button{display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid #39718c;background:#10364b;color:#c8f5ff;padding:12px 9px;border-radius:8px;cursor:pointer;font-size:11px;font-weight:650}
+.ton-unified-actions button:hover,.ton-unified-actions button:focus-visible{background:#17516b;border-color:#69dced;outline-offset:2px}
+.ton-unified-reference{border:1px solid #2c4c60;background:#0e2a3a;border-radius:10px;padding:15px}
+.ton-unified-reference-title{display:flex;align-items:center;gap:8px;color:#d9f4ff;font-size:12px}
+.ton-unified-reference p{color:#a7c1d0;font-size:10px;line-height:1.65;margin:9px 0 12px}
+.ton-unified-reference a{display:inline-block;font-size:11px;font-weight:700;color:#6edcf2;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1100px){.ton-unified-metric{gap:8px}.ton-unified-metric>strong{max-width:49%;min-width:60px}}
+@media(max-width:450px){.ton-unified-body{padding:12px 10px}.ton-unified-intro{padding:19px 15px}.ton-unified-actions{grid-template-columns:1fr}.ton-unified-metric>strong{font-size:14px;max-width:47%}}
+
+.ton-unified-planner-below{margin:14px 0 20px;background:#0b2334;border:1px solid #2c4c60;border-radius:11px;overflow:hidden}
+.ton-unified-planner-below>summary{cursor:pointer;list-style-position:inside;padding:13px 17px;color:#bde3ed;font-weight:700;font-size:12px}
+.ton-unified-planner-below[open]>summary{border-bottom:1px solid #2c4c60}
+.ton-unified-planner-below .ton-aid-priority{margin:0;max-width:none}

@@ -1,0 +1,1487 @@
+{
+  "schema_version": "1.0",
+  "sources": {
+    "undp_south_2026_04": {
+      "title": "Building-Level Damage Assessment: South Lebanon (Issue 1, June 2026)",
+      "publisher": "UNDP Lebanon and CNRS-L",
+      "source_url": "https://www.undp.org/sites/g/files/zskgke326/files/2026-06/south_factsheet.pdf",
+      "pdf_page": 1,
+      "observation_date": "2026-04-29",
+      "publication_date": "2026-06",
+      "baseline_date": "2025-10-23",
+      "validation": "office-based visual validation; no field verification",
+      "caveat": "Published listed hotspot destroyed building counts, not an exhaustive cadastral census; partially covered areas likely undercount. Do not compare as a common 2026-06 snapshot."
+    },
+    "undp_beirut_mount_2026_04": {
+      "title": "Building Level Damage Assessment, Beirut and Mount Lebanon, Report no. 1 (June 2026), Table 5",
+      "publisher": "UNDP Lebanon / CNRS-L",
+      "source_url": "https://www.undp.org/sites/g/files/zskgke326/files/2026-06/undp_cnrs_building_level_damage_assessment_june_2026_.pdf",
+      "pdf_page": 17,
+      "observation_date": "2026-04-14",
+      "publication_date": "2026-06",
+      "baseline_date": "2026-02-28",
+      "validation": "UNDP review and LAF / CNRS-L field verification through June 7",
+      "caveat": "Only assessed Beirut and Mount Lebanon area; targeted apartments are separate and cannot be summed as destroyed buildings."
+    }
+  },
+  "records": [
+    {
+      "source_name": "Aaintaroun",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 1658,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 1076,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aayta Ech-Chaab",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 539,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Beit Lif",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 371,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Yaroun",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 242,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aaynata Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 227,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Hanine",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 174,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Rachaf",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 117,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Tiri",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 91,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Yater",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 80,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chaqra",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 55,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kounine",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 48,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qaouzah",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 47,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Beit Yahoun",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 36,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Ramyet Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 36,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Rmaich",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 34,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Ghandouriyet Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 31,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jmaijmeh",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 31,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Khirbet Selm",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 27,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Soultaniyet Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 27,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kfar Dounine",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 24,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Haddatha",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 23,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Froun",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 21,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Maroun Er-Ras",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 17,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aaita Ej-Jabal",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Baraachit",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Debl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Tibnine",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Haris",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 15,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kafra Bent Jbayl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 13,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qalaouiyeh",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 13,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Srobbine",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 11,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Borj Qalaouiyeh",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 7,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Ntar",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 4,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aain Ibl",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 3,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Safad Al-Battikh",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 3,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Salhani",
+      "district": "Bent Jbeil",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Meiss Ej-Jabal",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 969,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Taybet Marjaayoun",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 824,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Houla",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 285,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Markaba",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 199,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Blida",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 184,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Siriane",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 174,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Rabb Et-Tlatine",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 163,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aadchit El-Qoussair",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 116,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qantara",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 116,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Majdel Selm",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 69,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qabrikha",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 69,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Touline",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 35,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Saouanet Marjaayoun",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 19,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Talloussa",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 15,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bany Haiyane",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mhaibib",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 5,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aalmane Marjaayoun",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 2,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aadaysseh Marjaayoun",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 242,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kfar Kila",
+      "district": "Marjaayoun",
+      "destroyed_buildings": 5,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Yohmor En-Nabatiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 71,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Zaoutar Ech-Charqiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 69,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kfar Sir",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 37,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Sir El-Gharbiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 4,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Arnoun",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 45,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Zaoutar El-Gharbiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 38,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qsaibet En-Nabatiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 21,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qaaqaaiyet Ej-Jisr",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 19,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Hamra En-Nabattiyeh",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 8,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mayfadoun",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 8,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Braiqeaa",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 4,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kfar Tibnit",
+      "district": "El Nabatieh",
+      "destroyed_buildings": 2,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Borj Ech Chemali",
+      "district": "Sour",
+      "destroyed_buildings": 370,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Borj En-Naqoura",
+      "district": "Sour",
+      "destroyed_buildings": 216,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aabbassiyet Sour",
+      "district": "Sour",
+      "destroyed_buildings": 162,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Sour",
+      "district": "Sour",
+      "destroyed_buildings": 80,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mansouri Sour",
+      "district": "Sour",
+      "destroyed_buildings": 65,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qlaileh Sour",
+      "district": "Sour",
+      "destroyed_buildings": 50,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bazouriyeh",
+      "district": "Sour",
+      "destroyed_buildings": 44,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jouaiya",
+      "district": "Sour",
+      "destroyed_buildings": 39,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chamaa",
+      "district": "Sour",
+      "destroyed_buildings": 34,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Qana",
+      "district": "Sour",
+      "destroyed_buildings": 32,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chehabiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 31,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mazraat Ez-Zalloutiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 31,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Debaal Sour",
+      "district": "Sour",
+      "destroyed_buildings": 30,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mheilib",
+      "district": "Sour",
+      "destroyed_buildings": 30,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Tayr Debbeh",
+      "district": "Sour",
+      "destroyed_buildings": 30,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Tayr Falsay",
+      "district": "Sour",
+      "destroyed_buildings": 30,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aain Baal",
+      "district": "Sour",
+      "destroyed_buildings": 29,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aaytit",
+      "district": "Sour",
+      "destroyed_buildings": 29,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Tayr Harfa",
+      "district": "Sour",
+      "destroyed_buildings": 29,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Zebqine",
+      "district": "Sour",
+      "destroyed_buildings": 29,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Majdelzoun",
+      "district": "Sour",
+      "destroyed_buildings": 28,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Barich",
+      "district": "Sour",
+      "destroyed_buildings": 25,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jbal El-Botm",
+      "district": "Sour",
+      "destroyed_buildings": 25,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Majdel",
+      "district": "Sour",
+      "destroyed_buildings": 25,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Rmadiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 25,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aalma Ech-Chaab",
+      "district": "Sour",
+      "destroyed_buildings": 23,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Sadiqine",
+      "district": "Sour",
+      "destroyed_buildings": 23,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Srifa",
+      "district": "Sour",
+      "destroyed_buildings": 22,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chaaitiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 21,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Merouahine",
+      "district": "Sour",
+      "destroyed_buildings": 21,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bedias",
+      "district": "Sour",
+      "destroyed_buildings": 20,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Halloussiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 18,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Qanoun El-Aain",
+      "district": "Sour",
+      "destroyed_buildings": 17,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Hamoul",
+      "district": "Sour",
+      "destroyed_buildings": 17,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Iskandarouna Sour",
+      "district": "Sour",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Maaroub",
+      "district": "Sour",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Mazraat Mechref",
+      "district": "Sour",
+      "destroyed_buildings": 16,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Qanoun En-Nahr",
+      "district": "Sour",
+      "destroyed_buildings": 15,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Henniyeh",
+      "district": "Sour",
+      "destroyed_buildings": 15,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Abou Chech",
+      "district": "Sour",
+      "destroyed_buildings": 13,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chihine",
+      "district": "Sour",
+      "destroyed_buildings": 11,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Aames",
+      "district": "Sour",
+      "destroyed_buildings": 11,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Hanaouay",
+      "district": "Sour",
+      "destroyed_buildings": 11,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aaziyeh",
+      "district": "Sour",
+      "destroyed_buildings": 10,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Batoulay",
+      "district": "Sour",
+      "destroyed_buildings": 9,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Arzoun",
+      "district": "Sour",
+      "destroyed_buildings": 8,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Derdaghaiya",
+      "district": "Sour",
+      "destroyed_buildings": 8,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Maarakeh",
+      "district": "Sour",
+      "destroyed_buildings": 8,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Recheknanay",
+      "district": "Sour",
+      "destroyed_buildings": 8,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Chehour",
+      "district": "Sour",
+      "destroyed_buildings": 7,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Ouadi Jilo",
+      "district": "Sour",
+      "destroyed_buildings": 7,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Selaa Sour",
+      "district": "Sour",
+      "destroyed_buildings": 7,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Borj Rahhal",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Boustane",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Deir Kifa",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Dhayra",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Toura",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Yarine",
+      "district": "Sour",
+      "destroyed_buildings": 6,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bafliyeh",
+      "district": "Sour",
+      "destroyed_buildings": 4,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jibbayn",
+      "district": "Sour",
+      "destroyed_buildings": 4,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Biyad",
+      "district": "Sour",
+      "destroyed_buildings": 3,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jennata",
+      "district": "Sour",
+      "destroyed_buildings": 3,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jijim",
+      "district": "Sour",
+      "destroyed_buildings": 2,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Neftakhiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 2,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Niha Sour",
+      "district": "Sour",
+      "destroyed_buildings": 2,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aaiyeh",
+      "district": "Sour",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Bestiyat",
+      "district": "Sour",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Hmairi Sour",
+      "district": "Sour",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Kneisset Sour",
+      "district": "Sour",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Yanouh Sour",
+      "district": "Sour",
+      "destroyed_buildings": 1,
+      "coverage": "full",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aain Abou Abdallah",
+      "district": "Sour",
+      "destroyed_buildings": 19,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Zrariyeh",
+      "district": "Saida",
+      "destroyed_buildings": 65,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Arzai",
+      "district": "Saida",
+      "destroyed_buildings": 62,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Jazira Saida",
+      "district": "Saida",
+      "destroyed_buildings": 3,
+      "coverage": "partial",
+      "dataset_id": "undp_south_2026_04",
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null
+    },
+    {
+      "source_name": "Aramoun",
+      "district": "Aley",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 4,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Bchamoun",
+      "district": "Aley",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Choueifat El-Amrousieh",
+      "district": "Aley",
+      "destroyed_buildings": 6,
+      "partially_damaged_buildings": 8,
+      "targeted_apartments": null,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Choueifat El-Oumara",
+      "district": "Aley",
+      "destroyed_buildings": 1,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Choueifat Qobbeh",
+      "district": "Aley",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Deir Qoubel",
+      "district": "Aley",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Baabda",
+      "district": "Baabda",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 2,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Bourj El-Brajneh",
+      "district": "Baabda",
+      "destroyed_buildings": 28,
+      "partially_damaged_buildings": 47,
+      "targeted_apartments": 3,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Chiyah",
+      "district": "Baabda",
+      "destroyed_buildings": 22,
+      "partially_damaged_buildings": 36,
+      "targeted_apartments": 10,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Hadath Beyrouth",
+      "district": "Baabda",
+      "destroyed_buildings": 23,
+      "partially_damaged_buildings": 37,
+      "targeted_apartments": 9,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Haret Hreik",
+      "district": "Baabda",
+      "destroyed_buildings": 58,
+      "partially_damaged_buildings": 114,
+      "targeted_apartments": 9,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Kfar Chima",
+      "district": "Baabda",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": 1,
+      "targeted_apartments": null,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Laylakeh",
+      "district": "Baabda",
+      "destroyed_buildings": 2,
+      "partially_damaged_buildings": 8,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Tahouitat El Ghadir",
+      "district": "Baabda",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Ain el Mreisseh",
+      "district": "Beirut",
+      "destroyed_buildings": 1,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": null,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Bachoura",
+      "district": "Beirut",
+      "destroyed_buildings": 1,
+      "partially_damaged_buildings": 1,
+      "targeted_apartments": 3,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Mazraa",
+      "district": "Beirut",
+      "destroyed_buildings": 2,
+      "partially_damaged_buildings": 9,
+      "targeted_apartments": null,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Moussaytbeh",
+      "district": "Beirut",
+      "destroyed_buildings": 1,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 4,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Ras Beyrouth",
+      "district": "Beirut",
+      "destroyed_buildings": 1,
+      "partially_damaged_buildings": 3,
+      "targeted_apartments": 1,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    },
+    {
+      "source_name": "Zoukak el Blatt",
+      "district": "Beirut",
+      "destroyed_buildings": null,
+      "partially_damaged_buildings": null,
+      "targeted_apartments": 3,
+      "coverage": "assessment_area",
+      "dataset_id": "undp_beirut_mount_2026_04"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+
+/* Two-observation NASA comparisons are NOT monthly time series. */
+.ton-night-chart{display:flex;flex-direction:column}
+.ton-night-chart-plot{flex:1;min-height:0;width:100%}
+.ton-night-chart--comparison{height:300px;padding:14px 14px 10px}
+.ton-night-chart-caption{margin:7px 0 0;text-align:center;color:#a9c6d8;font-size:11px;line-height:1.5}
+.ton-night-observation-note{margin:10px 1px 0;display:flex;gap:8px;align-items:flex-start;color:#bed2de;font-size:11px;line-height:1.55}
+.ton-night-observation-note svg{flex-shrink:0;color:#e7c577;margin-top:1px}
+@media(max-width:650px){.ton-night-chart--comparison{height:270px;padding:10px}.ton-night-chart-caption{font-size:10px}}

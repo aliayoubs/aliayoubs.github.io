@@ -1,0 +1,178 @@
+import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
+import {createPortal} from 'react-dom';
+import {
+  ArrowLeftRight,BookOpen,CalendarDays,ChevronLeft,ChevronRight,Download,ExternalLink,
+  Info,Layers3,Loader2,MapPin,Minus,MoonStar,Plus,RotateCcw,ShieldCheck,UploadCloud,X
+} from 'lucide-react';
+import {villages,STUDY_AREA_IDS} from '../../data/villages';
+import {studyDistricts} from '../../data/officialEvidence';
+import {lebanonDistrictCatalog} from '../../data/nationalDistrictMovement';
+import {WORLD_BANK_BLACK_MARBLE_URL,parseWorldBankDistrictData,type WorldBankBlackMarbleData} from '../../services/worldBankBlackMarble';
+import {NASA_2026_CATALOG_URL,parseNASA2026DistrictData,type NASA2026Dataset} from '../../services/nasaBlackMarbleDistrict2026';
+import BlackMarbleChart from '../charts/BlackMarbleChart';
+import NASASeptemberComparison from './NASASeptemberComparison';
+import PublishedNightlights from './PublishedNightlights';
+import {
+  addDays,blackMarbleImageUrl,BLACK_MARBLE_MONTHLY,BLACK_MARBLE_PORTAL,BLACK_MARBLE_SOURCE,
+  boundsNear,exportRadianceTemplate,LEBANON_BOUNDS,parseRadianceCsv,validIsoDate,
+  type GeoBounds,type RadiancePoint
+} from '../../services/blackMarble';
+
+const BEFORE='2025-10-23';const AFTER='2026-06-16';
+const today=new Date().toISOString().slice(0,10);
+type FocusKind='country'|'district'|'village';
+type Scope={kind:FocusKind;id:string;name:string;coordinates:[number,number]};
+type Props={open:boolean;onClose:()=>void;initialDistrictId:string;initialVillageId:string|null;initialLevel:'district'|'village'};
+type LoadState='loading'|'ready'|'error';
+const focusedVillage=(id:string|null)=>villages.find(v=>v.id===id)||villages.find(v=>v.id===STUDY_AREA_IDS[0])!;
+const scopes:Scope[]=[{kind:'country',id:'lebanon',name:'Lebanon',coordinates:[35.70,33.82]},
+  ...studyDistricts.map(d=>({kind:'district' as const,id:d.id,name:`${d.name} District`,coordinates:d.center})),
+  ...STUDY_AREA_IDS.map(id=>{const v=focusedVillage(id);return {kind:'village' as const,id,name:v.name,coordinates:v.coordinates};})];
+const constrain=(v:number)=>Math.min(92,Math.max(8,v));
+
+function ImageFrame({date,bbox,label,side}:{date:string;bbox:GeoBounds;label:string;side:'left'|'right'}){
+  const [state,setState]=useState<LoadState>('loading');
+  const src=useMemo(()=>validIsoDate(date)?blackMarbleImageUrl(date,bbox,1024,720):'',[date,bbox]);
+  useEffect(()=>setState('loading'),[src]);
+  return <div className="ton-night-frame" data-side={side}>
+    {src&&<img key={src} src={src} alt={`${label}: NASA GIBS Black Marble daily radiance preview for ${date}`} draggable={false} onLoad={()=>setState('ready')} onError={()=>setState('error')}/>}
+    <div className="ton-night-image-label"><b>{label}</b><span>{date}</span></div>
+    {state==='loading'&&<div className="ton-night-image-notice"><Loader2 size={21} className="ton-night-spin"/> Loading dated NASA imagery…</div>}
+    {state==='error'&&<div className="ton-night-image-notice error"><Info size={21}/>No GIBS image returned for this date. Try another day or check the connection.</div>}
+    {state==='ready'&&<span className="ton-night-frame-ready">GIBS image returned · pixel quality not assessed</span>}
+  </div>;
+}
+export default function NightlightsModal({open,onClose,initialDistrictId,initialVillageId,initialLevel}:Props){
+  const [scopeId,setScopeId]=useState('lebanon');
+  const [before,setBefore]=useState(BEFORE);
+  const [after,setAfter]=useState(AFTER);
+  const [swipe,setSwipe]=useState(50);
+  const [layout,setLayout]=useState<'swipe'|'split'>('swipe');
+  const [scale,setScale]=useState(1);
+  const [uploaded,setUploaded]=useState<RadiancePoint[]>([]);
+  const [worldBank,setWorldBank]=useState<WorldBankBlackMarbleData|null>(null);
+  const [nasa2026,setNasa2026]=useState<NASA2026Dataset|null>(null);
+  const [trendSource,setTrendSource]=useState<'worldbank'|'nasa2026'|'manual'>('worldbank');
+  const [trendDistrict,setTrendDistrict]=useState('Bent Jbeil');
+  const [baselineMonth,setBaselineMonth]=useState('');
+  const [followupMonth,setFollowupMonth]=useState('');
+  const [filename,setFilename]=useState('');
+  const [importError,setImportError]=useState('');
+  const [activeTab,setActiveTab]=useState<'images'|'published'|'trend'|'method'>('published');
+  const swipeRef=useRef<HTMLDivElement>(null);
+  const inputRef=useRef<HTMLInputElement>(null);
+  const scope=scopes.find(s=>s.id===scopeId)||scopes[0];
+  const bounds=useMemo<GeoBounds>(()=>scope.kind==='country'?LEBANON_BOUNDS:boundsNear(scope.coordinates,scope.kind,scale),[scope,scale]);
+  const relevant=useMemo(()=>{
+    if(trendSource==='nasa2026')return (nasa2026?.districts.find(d=>d.district===trendDistrict)?.points||[]).map(p=>({
+      period:p.period,geography_level:'district' as const,area_id:trendDistrict,
+      radiance:p.radiance,validPixels:p.validPixels,product:'NASA VNP46A2 (GEE)',
+    }));
+    if(trendSource==='worldbank')return (worldBank?.districts.find(d=>d.district===trendDistrict)?.points||[]).map(p=>({
+      period:p.period,geography_level:'district' as const,area_id:trendDistrict,
+      radiance:p.radiance,validPixels:p.validPixels??0,product:'World Bank Space2Stats',
+    }));
+    return uploaded.filter(p=>p.geography_level===scope.kind&&p.area_id===scope.id);
+  },[trendSource,worldBank,nasa2026,trendDistrict,uploaded,scope]);
+  const first=useMemo(()=>relevant.find(p=>p.period===baselineMonth)||(trendSource==='nasa2026'?relevant.find(p=>p.period==='2025-10'):null)||relevant[0],[relevant,baselineMonth,trendSource]);
+  const second=useMemo(()=>relevant.find(p=>p.period===followupMonth)||[...relevant].reverse().find(p=>p.period!==first?.period&&p.period.slice(-2)===first?.period.slice(-2))||relevant[relevant.length-1],[relevant,followupMonth,first]);
+  const change=first&&second&&first.period!==second.period&&first.radiance>0?100*(second.radiance-first.radiance)/first.radiance:null;
+  useEffect(()=>{
+    fetch('/data/worldBankDistrictBlackMarble.json',{cache:'no-store'})
+      .then(r=>r.ok?r.json():null).then(data=>setWorldBank(parseWorldBankDistrictData(data)))
+      .catch(()=>setWorldBank(null));
+  },[]);
+  useEffect(()=>{
+    fetch('/data/nasaBlackMarbleDistrict2026.json',{cache:'no-store'})
+      .then(r=>r.ok?r.json():null).then(data=>setNasa2026(parseNASA2026DistrictData(data)))
+      .catch(()=>setNasa2026(null));
+  },[]);
+  useEffect(()=>{if(open){setScopeId(initialLevel==='village'&&initialVillageId?initialVillageId:initialDistrictId);setSwipe(50);}},[open,initialVillageId,initialDistrictId,initialLevel]);
+  useEffect(()=>{if(!open)return;const previous=document.body.style.overflow;document.body.style.overflow='hidden';const key=(e:KeyboardEvent)=>{if(e.key==='Escape')onClose()};window.addEventListener('keydown',key);return()=>{document.body.style.overflow=previous;window.removeEventListener('keydown',key)}},[open,onClose]);
+  const setDay=useCallback((side:'before'|'after',day:string)=>{if(day>today||day<'2012-01-19')return;if(side==='before')setBefore(day);else setAfter(day)},[]);
+  const updateSwipe=(clientX:number)=>{const rect=swipeRef.current?.getBoundingClientRect();if(rect?.width)setSwipe(constrain((clientX-rect.left)/rect.width*100));};
+  async function importFile(file:File|undefined){
+    if(!file)return;setImportError('');
+    if(file.size>2*1024*1024){setImportError('CSV is too large; use an aggregated district/village table under 2 MB.');return;}
+    try{const rows=parseRadianceCsv(await file.text());setUploaded(rows);setFilename(file.name);setTrendSource('manual');setActiveTab('trend');}
+    catch(e){setImportError(e instanceof Error?e.message:'Unable to read CSV');}
+  }
+  if(!open)return null;
+  const selectedRegion=scope.kind==='country'?'COUNTRY':scope.kind==='district'?'DISTRICT / ADM2':'CADASTRE / ADM3';
+  return createPortal(<div className="ton-night-overlay" onMouseDown={e=>{if(e.target===e.currentTarget)onClose()}}>
+    <section className="ton-night-modal" role="dialog" aria-modal="true" aria-label="Lebanon nightlights with NASA Black Marble and published research" onPointerDown={e=>e.stopPropagation()}>
+      <header className="ton-night-modal-head">
+        <div><span className="ton-night-eyebrow"><MoonStar size={15}/> TON 618 / EARTH OBSERVATION / LEBANON</span><h2>Nighttime Lights <em>Intelligence</em></h2><p>NASA Black Marble imagery + source-backed published studies</p></div>
+        <button className="ton-night-close" aria-label="Close nighttime lights" onClick={onClose}><X size={20}/></button>
+      </header>
+      <nav className="ton-night-tabs" aria-label="Nightlights sections">
+        <button className={activeTab==='images'?'active':''} onClick={()=>setActiveTab('images')}><Layers3 size={15}/> NASA before / after</button>
+        <button className={activeTab==='published'?'active':''} onClick={()=>setActiveTab('published')}><BookOpen size={15}/> Published results</button>
+        <button className={activeTab==='trend'?'active':''} onClick={()=>setActiveTab('trend')}><MoonStar size={15}/> NASA measurements</button>
+        <button className={activeTab==='method'?'active':''} onClick={()=>setActiveTab('method')}><BookOpen size={15}/> Data & quality</button>
+      </nav>
+      <div className="ton-night-scroll">
+        {activeTab!=='trend'&&<div className="ton-night-scope-row">
+          <label>AREA OF INTEREST<select value={scopeId} onChange={e=>{setScopeId(e.target.value);setScale(1)}}>
+            <option value="lebanon">🇱🇧 Lebanon · national</option>
+            <optgroup label="Districts · ADM2">{studyDistricts.map(d=><option key={d.id} value={d.id}>{d.name} District</option>)}</optgroup>
+            <optgroup label="Featured villages · ADM3">{STUDY_AREA_IDS.map(id=><option value={id} key={id}>{focusedVillage(id).name}</option>)}</optgroup>
+          </select></label>
+          <div className="ton-night-region-chip"><MapPin size={14}/> <span>{selectedRegion}</span><strong>{scope.name}</strong></div>
+          <div className="ton-night-source-chip"><ShieldCheck size={14}/> {activeTab==='published'?'INDEPENDENT PUBLISHED ANALYSES':'NASA GIBS visual layer, not calibrated measurements'}</div>
+        </div>}
+        {activeTab==='images'&&<>
+          <div className="ton-night-image-toolbar">
+            <label>BEFORE · DAILY<input type="date" min="2012-01-19" max={today} value={before} onChange={e=>setDay('before',e.target.value)}/></label>
+            <div className="ton-night-date-arrows"><button title="Before: previous day" aria-label="Before previous day" onClick={()=>setDay('before',addDays(before,-1))}><ChevronLeft size={16}/></button><button title="Before: next day" aria-label="Before next day" onClick={()=>setDay('before',addDays(before,1))}><ChevronRight size={16}/></button></div>
+            <label>AFTER · DAILY<input type="date" min="2012-01-19" max={today} value={after} onChange={e=>setDay('after',e.target.value)}/></label>
+            <div className="ton-night-date-arrows"><button title="After: previous day" aria-label="After previous day" onClick={()=>setDay('after',addDays(after,-1))}><ChevronLeft size={16}/></button><button title="After: next day" aria-label="After next day" onClick={()=>setDay('after',addDays(after,1))}><ChevronRight size={16}/></button></div>
+            <button className="ton-night-utility" onClick={()=>{setBefore(BEFORE);setAfter(AFTER);setSwipe(50)}}><CalendarDays size={15}/> UNDP dates</button>
+          </div>
+          <div className="ton-night-map-actions">
+            <div className="ton-night-segment"><button className={layout==='swipe'?'active':''} onClick={()=>setLayout('swipe')}><ArrowLeftRight size={15}/> Swipe</button><button className={layout==='split'?'active':''} onClick={()=>setLayout('split')}>Side by side</button></div>
+            {scope.kind!=='country'&&<div className="ton-night-zoom"><button aria-label="Zoom out" onClick={()=>setScale(s=>Math.min(2.5,+(s*1.3).toFixed(3)))}><Minus size={15}/></button><span>Viewport ×{(1/scale).toFixed(1)}</span><button aria-label="Zoom in" onClick={()=>setScale(s=>Math.max(.42,+(s/1.3).toFixed(3)))}><Plus size={15}/></button></div>}
+            <button className="ton-night-utility" onClick={()=>{setScale(1);setSwipe(50)}}><RotateCcw size={14}/> Reset view</button>
+          </div>
+          {before>=after&&<p className="ton-night-alert"><Info size={15}/> Select a BEFORE date earlier than your AFTER date for a meaningful comparison.</p>}
+          <div className={layout==='split'?'ton-night-comparison ton-night-split':'ton-night-comparison ton-night-swipe'} ref={swipeRef}>
+            <ImageFrame date={before} bbox={bounds} label="BEFORE" side="left"/>
+            <div className="ton-night-after-layer" style={layout==='swipe'?{clipPath:`inset(0 0 0 ${swipe}%)`}:undefined}><ImageFrame date={after} bbox={bounds} label="AFTER" side="right"/></div>
+            {layout==='swipe'&&<>
+              <div className="ton-night-divider" style={{left:`${swipe}%`}}><span><ArrowLeftRight size={20}/></span></div>
+              <input className="ton-night-slider" aria-label="Swipe between before and after NASA Black Marble images" type="range" min="8" max="92" step="1" value={Math.round(swipe)} onChange={e=>setSwipe(Number(e.target.value))} onPointerDown={e=>{e.stopPropagation();e.currentTarget.setPointerCapture(e.pointerId)}} onPointerMove={e=>{if(e.buttons===1)updateSwipe(e.clientX)}} onClick={e=>e.stopPropagation()}/>
+            </>}
+            <div className="ton-night-coordinates" aria-hidden="true">{scope.kind==='country'?'LEBANON · NATIONAL VIEW':`${scope.coordinates[1].toFixed(3)}°N  ${scope.coordinates[0].toFixed(3)}°E · REFERENCE CENTER`}</div>
+          </div>
+          {layout==='swipe'&&<div className="ton-night-swipe-bar"><span>BEFORE</span><input type="range" min="8" max="92" value={Math.round(swipe)} onChange={e=>setSwipe(Number(e.target.value))} aria-label="Comparison divider position"/><span>AFTER</span></div>}
+          <div className="ton-night-warning"><Info size={16}/><p><strong>Scientific interpretation:</strong> Both images use NASA's gap-filled BRDF-corrected daily nightlight visualization. They are not field-verified outages, not building-level maps, and are not the monthly cloud-free baseline used in some NASA disaster products. Check cloud/snow/quality flags in the underlying science files before drawing conclusions. Around 500 m pixels are too coarse to identify individual damaged buildings.</p></div>
+          <div className="ton-night-links"><a href={BLACK_MARBLE_PORTAL} target="_blank" rel="noreferrer"><ExternalLink size={13}/> NASA disaster Black Marble</a><a href={BLACK_MARBLE_SOURCE} target="_blank" rel="noreferrer"><ExternalLink size={13}/> VNP46A2 product</a></div>
+        </>}
+        {activeTab==='published'&&<PublishedNightlights scopeKind={scope.kind} scopeName={scope.name}/>}
+        {activeTab==='trend'&&<>
+          <div className="ton-night-trend-source">
+            <div className="ton-night-segment"><button className={trendSource==='worldbank'?'active':''} onClick={()=>{setTrendSource('worldbank');setBaselineMonth('');setFollowupMonth('')}}>World Bank · 2023–25</button><button className={trendSource==='nasa2026'?'active':''} onClick={()=>{setTrendSource('nasa2026');setBaselineMonth('');setFollowupMonth('')}}>NASA · Districts 2025–26</button><button className={trendSource==='manual'?'active':''} onClick={()=>{setTrendSource('manual');setBaselineMonth('');setFollowupMonth('')}}>Manual NASA CSV</button></div>
+            {trendSource!=='manual'&&<label>LEBANON DISTRICT <select value={trendDistrict} onChange={e=>{setTrendDistrict(e.target.value);setBaselineMonth('');setFollowupMonth('')}}>{lebanonDistrictCatalog.map(d=><option key={d.district} value={d.district}>{d.district}</option>)}</select></label>}
+          </div>
+          <div className="ton-night-trend-top"><div><span className="ton-night-eyebrow">{['nasa2026','village'].includes(trendSource)?'RADIANCE / SEPTEMBER COMPARISON':'RADIANCE / TIME SERIES'}</span><h3>{trendSource!=='manual'?`${trendDistrict} District`:scope.name}</h3><p>Mean nighttime radiance · nW/cm²/sr · {trendSource==='worldbank'?'World Bank Space2Stats published ADM2 composites':trendSource==='nasa2026'?'NASA VNP46A2 daily, 2025 and 2026 monthly QA-screened district aggregation':'User-imported, declared QA-screened NASA measurements'}</p></div><span className="ton-night-counter">{relevant.length} recorded periods</span></div>
+          {relevant.length>0?<>
+            {['nasa2026','village'].includes(trendSource) ? <NASASeptemberComparison points={relevant}/> : <BlackMarbleChart points={relevant}/>}
+            <div className="ton-night-trend-comparison"><label>BASELINE PERIOD<select value={first?.period||''} onChange={e=>setBaselineMonth(e.target.value)}>{relevant.map(p=><option key={p.period} value={p.period}>{p.period}</option>)}</select></label><label>COMPARE TO<select value={second?.period||''} onChange={e=>setFollowupMonth(e.target.value)}>{relevant.map(p=><option key={p.period} value={p.period}>{p.period}</option>)}</select></label></div>
+            <div className="ton-night-metrics"><div><span>BASELINE RADIANCE</span><b>{first?.radiance.toFixed(3)??'—'}</b><small>{first?.period??'—'}</small></div><div><span>COMPARISON RADIANCE</span><b>{second?.radiance.toFixed(3)??'—'}</b><small>{second?.period??'—'}</small></div><div><span>CHANGE · CHOSEN PERIODS</span><b>{change===null?'—':`${change>=0?'+':''}${change.toFixed(1)}%`}</b><small>{change===null?'Choose different months; baseline must be above zero':'Brightness change, not a percent of people in need'}</small></div></div>
+            <div className="ton-night-table-wrap"><table><thead><tr><th>Period</th><th>Mean radiance</th><th>{trendSource==='worldbank'?'Quality coverage':'Valid pixels'}</th><th>Source</th></tr></thead><tbody>{relevant.map((p,i)=><tr key={i}><td>{p.period}</td><td>{p.radiance.toFixed(4)}</td><td>{trendSource==='worldbank'?(worldBank?.districts.find(d=>d.district===trendDistrict)?.points.find(x=>x.period===p.period)?.quality0Fraction===null?'Not provided':`${((worldBank?.districts.find(d=>d.district===trendDistrict)?.points.find(x=>x.period===p.period)?.quality0Fraction??0)*100).toFixed(1)}%`):(p.validPixels||0).toLocaleString()}</td><td>{p.product}</td></tr>)}</tbody></table></div>
+          </>:<div className="ton-night-empty-chart"><MoonStar size={36}/><h3>{trendSource==='worldbank'?'World Bank district values not yet synced':trendSource==='nasa2026'?'NASA 2026 district measurements not yet imported':'No verified radiance trend loaded'}</h3><p>{trendSource==='nasa2026'?(nasa2026?'No QA-valid NASA observations for this district in the imported months; missing measurements are unknown, not zero.':'Export the 2025 and 2026 NASA VNP46A2 series using Google Earth Engine, then import both CSV files using the included Python command. The website will show actual values only after that step.') :trendSource==='worldbank'?(worldBank?.excludedConflicts?.some(x=>x.district===trendDistrict)?'World Bank reported multiple conflicting source records for this district. The importer excluded those observations rather than averaging them or choosing one arbitrarily. A verified source-boundary crosswalk is required.':worldBank?'No unambiguous measured data for this district in the imported periods. This does not mean zero brightness.':'The official dataset covers monthly ADM2 observations through 2025, but numerical Lebanon records are not bundled until the World Bank source is fetched and processed. Run the project sync command once with an internet connection. No fabricated radiance series is shown.'): `Import a cloud/quality-filtered Black Marble CSV to display a real radiance trend for ${scope.name}.`}</p><span>0 observed values · No demonstration numbers</span></div>}
+          {trendSource==='nasa2026'&&!!nasa2026?.coverageWarnings?.length&&<p className="ton-night-alert"><Info size={15}/> Some NASA district-month combinations have no valid measurements. Gaps are left blank, not treated as zero. See the export quality report for details.</p>}
+          {trendSource==='worldbank'&&!!worldBank?.failedYears?.length&&<p className="ton-night-alert"><Info size={15}/> Partial import: {worldBank.failedYears.join(', ')} could not be downloaded completely. Only the listed source years {worldBank.sourceYears.join(', ')} are shown. Missing periods are unknown, not zero. Retry the missing year after the connection is stable.</p>}
+          {trendSource==='worldbank'&&worldBank?.excludedConflicts?.some(x=>x.district===trendDistrict)&&<p className="ton-night-alert"><Info size={15}/> Some {trendDistrict} months were excluded because the World Bank source contains multiple distinct ADM2 records with that district name. Those months are unknown, not zero. Review the importer warnings.</p>}
+          {trendSource==='nasa2026'?<div className="ton-night-import"><div><strong><Download size={17}/> NASA Black Marble 2026 · 26 districts</strong><p>Use <code>scripts/ton618_nasa_blackmarble_2025_2026_gee.js</code> in Google Earth Engine, export the two CSV files, then run <code>python scripts/import_nasa_blackmarble_2026.py --csv [2025.csv] [2026.csv]</code> in PowerShell (replace brackets with actual paths). Reload this page to view the 2025 baseline and the 2026 monthly series.</p><p>Quality-screened daily NASA VNP46A2, aggregated to monthly district statistics using FAO GAUL 2025 boundaries. Independent method from World Bank Space2Stats; do not directly join their radiances.</p><p>Source: <a href={NASA_2026_CATALOG_URL} target="_blank" rel="noreferrer">NASA VNP46A2 Earth Engine catalogue <ExternalLink size={12}/></a>.</p></div></div>:trendSource==='worldbank'?<div className="ton-night-import"><div><strong><Download size={17}/> World Bank Space2Stats · monthly Black Marble</strong><p>Dataset available for 2012–2025; automated extractor for 2023–2025 included with the project. From your TON 618 folder, run <code>npm run sync:blackmarble</code> once, then reload the website. This fetches published rows, not NASA GIBS image colors.</p><p>Source: <a href={WORLD_BANK_BLACK_MARBLE_URL} target="_blank" rel="noreferrer">World Bank Data Catalog <ExternalLink size={12}/></a> · CC BY 4.0. Quality coverage is shown when present; unavailable quality information is not invented.</p></div></div>:<div className="ton-night-import"><div><strong><UploadCloud size={17}/> Import processed NASA radiance CSV</strong><p>Monthly VNP46A3 or daily VNP46A2 aggregated by matching administrative boundaries, with declared quality masks.</p></div><input ref={inputRef} hidden type="file" accept=".csv,text/csv" onChange={e=>{void importFile(e.target.files?.[0]);e.target.value=''}}/><button className="ton-night-import-button" onClick={()=>inputRef.current?.click()}><UploadCloud size={15}/> Upload CSV</button><button className="ton-night-utility" onClick={exportRadianceTemplate}><Download size={15}/> Template</button></div>}
+          {!!filename&&trendSource==='manual'&&<p className="ton-night-file-status"><ShieldCheck size={14}/> Imported: {filename} · {uploaded.length} observations (QA declared by file)</p>}
+          {!!importError&&trendSource==='manual'&&<p className="ton-night-alert" role="alert">{importError}</p>}
+          <div className="ton-night-warning"><Info size={16}/><p>{trendSource==='nasa2026'?'Direct NASA VNP46A2 quality-screened monthly district means use FAO GAUL 2025 boundaries and are NOT directly comparable to World Bank Space2Stats means. Data gaps, minimum valid-night thresholds, seasonal variation and very dim areas affect interpretation; light loss is not a count of people needing aid.':trendSource==='worldbank'?'World Bank Space2Stats monthly data is independently aggregated from NASA Black Marble and may use different geographic boundaries and quality rules than manually imported NASA scenes. Seasonal comparisons, missing values, cloud/gap-filled observations, and fluctuations unrelated to electricity require care. Brightness change does not establish aid demand.':'CSV format and declared QA are checked by the website, but their measurements are not independently verified. Never estimate district data from a screenshot or transfer it to villages.'}</p></div>
+          <div className="ton-night-links"><a href={trendSource==='worldbank'?WORLD_BANK_BLACK_MARBLE_URL:trendSource==='nasa2026'?NASA_2026_CATALOG_URL:BLACK_MARBLE_MONTHLY} target="_blank" rel="noreferrer"><ExternalLink size={13}/>{trendSource==='worldbank'?' Published World Bank ADM2 dataset':trendSource==='nasa2026'?' NASA VNP46A2 daily data':' NASA monthly VNP46A3 data'}</a></div>
+        </>}
+        {activeTab==='method'&&<div className="ton-night-method"><h3>NASA Black Marble and independent published nighttime-light analyses over Lebanon</h3><p><strong>Imagery in this viewer:</strong> NASA GIBS layer <code>VIIRS_SNPP_GapFilled_BRDF_Corrected_DayNightBand_Radiance</code>, sourced from the daily Suomi NPP VIIRS VNP46A2 product. Requests are dated and geographically focused on Lebanon.</p><p><strong>Resolution:</strong> roughly 500 m per pixel. Selectable country, district, and village views change the viewport; they do not clip pixels to administrative polygons.</p><p><strong>Comparable quantitative trends:</strong> TON 618 includes a reproducible Google Earth Engine exporter for quality-screened daily VNP46A2 over FAO GAUL 2025 ADM2 boundaries, with 2025 and 2026 monthly per-pixel medians and district means. Import the resulting verified CSV files locally before any numbers appear. This method is separate from World Bank Space2Stats and their absolute means must not be joined as if identical.</p><p><strong>Conditions to check:</strong> cloud and snow masks, gap-filling, acquisition dates, seasonal variation, moonlight correction, radiance scale, and sample coverage. Darkening does not prove damage, conflict activity, or displacement.</p><p><strong>Published results:</strong> Aaber (2 Nov 2026) analyzed NASA VNP46A2 for 376 Southern Lebanese cadastral areas, comparing valid September 2025 and 2026 observations. Its reported percentages are secondary published findings, not a reconstructed NASA radiance series. The World Bank (5 Nov 2026) reports 2025 and 2026 trend directions, but the page does not expose exact numeric series. These sources use different periods and are not combined arithmetically.</p><p><strong>Source consistency:</strong> the UNDP comparison dates (23 Oct 2025 and 16 Jun 2026) are initial presets only; this panel uses NASA Black Marble imagery, not the very-high-resolution optical imagery used in UNDP's building assessment.</p><div className="ton-night-links"><a href={BLACK_MARBLE_SOURCE} target="_blank" rel="noreferrer">Daily product details <ExternalLink size={13}/></a><a href={BLACK_MARBLE_MONTHLY} target="_blank" rel="noreferrer">Monthly product details <ExternalLink size={13}/></a><a href={BLACK_MARBLE_PORTAL} target="_blank" rel="noreferrer">NASA Black Marble overview <ExternalLink size={13}/></a></div></div>}
+      </div>
+      <footer className="ton-night-foot"><span><ShieldCheck size={15}/> NASA Black Marble + published research · No live damage inference</span><span>{activeTab==='published'?'Independent studies · 2025–2026':`${scope.name} · ${before} / ${after}`}</span></footer>
+    </section>
+  </div>,document.body);
+}

@@ -1,0 +1,32 @@
+/* TON618_IOM_COMBINED_REDESIGN_V1 — simpler visual hierarchy and 2-column resource cards. */
+.ton-aid-simple{max-width:100%;}
+.ton-aid-simple .ton-aid-simple-hero{margin-bottom:20px}
+.ton-aid-simple-population,.ton-aid-simple-resources,.ton-aid-simple-assessment{border:1px solid #2f536c;border-radius:18px;padding:19px 21px;background:linear-gradient(145deg,#102e43,#0d2537);margin:0 0 16px}
+.ton-aid-simple-section-heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.ton-aid-simple-section-heading>span{display:flex;align-items:center;justify-content:center;border-radius:8px;width:32px;height:32px;background:#24506a;color:#d7f0ff;font-size:12px;font-weight:800}
+.ton-aid-simple-section-heading h3{font-size:17px;letter-spacing:-.02em;margin:0;color:#eef8fc}
+.ton-aid-simple-section-heading>small{font-size:11px;color:#b4cbd9;margin-left:auto}
+.ton-aid-simple-pop-main{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px}
+.ton-aid-simple-pop-main>div:first-child{border-radius:14px;background:#17435a;padding:18px;display:flex;flex-direction:column;gap:8px}
+.ton-aid-simple-pop-main small,.ton-aid-simple-pop-main span{font-size:12px;color:#b8d0df;line-height:1.4}
+.ton-aid-simple-pop-main>div:first-child strong{font-size:clamp(27px,3vw,38px);color:#f5fdff;line-height:1.15;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.ton-aid-simple-pop-parts{display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
+.ton-aid-simple-pop-parts>div{border-radius:12px;background:#0c2537;border:1px solid #294a60;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:9px}
+.ton-aid-simple-pop-parts strong{font-size:20px;color:#edf7fb;font-variant-numeric:tabular-nums}
+.ton-aid-simple-inline-note{font-size:12px;color:#adc8d6;margin:12px 0 0;line-height:1.55}
+.ton-aid-simple-resource-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ton-aid-simple-resource-cards>div{background:#0a2435;border:1px solid #31566d;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ton-aid-simple-resource-label{display:flex;align-items:center;gap:9px;color:#d0e9f5;font-size:13px;font-weight:650}
+.ton-aid-simple-resource-cards strong{color:#f5fdff;font-size:clamp(23px,2.6vw,32px);font-variant-numeric:tabular-nums;line-height:1.15;overflow-wrap:anywhere}
+.ton-aid-simple-resource-cards small,.ton-aid-simple-resource-cards p{font-size:12px;color:#a9c8d8;margin:0}
+.ton-aid-simple-assessment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ton-aid-simple-assessment-grid>div{border:1px solid #2a5068;border-radius:12px;padding:14px;background:#0b2638;display:flex;flex-direction:column;gap:8px}
+.ton-aid-simple-assessment-grid small,.ton-aid-simple-assessment-grid span,.ton-aid-simple-factorline,.ton-aid-simple-muted{font-size:12px;line-height:1.5;color:#b1ccd9}
+.ton-aid-simple-assessment-grid strong{font-size:25px;color:#f0f8fe}
+.ton-aid-simple-factorline{margin:15px 0 0}
+.ton-aid-simple-muted{margin:9px 0 0}
+.ton-aid-simple-details .ton-aid-auto-row strong{font-size:13px;max-width:55%;overflow-wrap:anywhere}
+.ton-aid-simple-footer{display:flex;gap:12px;align-items:start;color:#aec5d2;font-size:12px;line-height:1.5;margin:17px 0}
+.ton-aid-simple-footer svg{flex-shrink:0}
+.ton-aid-simple-footer a{display:inline-flex;gap:6px;align-items:center;color:#99dbfc}
+@media(max-width:720px){.ton-aid-simple-pop-main,.ton-aid-simple-resource-cards,.ton-aid-simple-assessment-grid{grid-template-columns:1fr}.ton-aid-simple-pop-parts{grid-template-rows:none}.ton-aid-simple-section-heading>small{margin-left:0}.ton-aid-simple-population,.ton-aid-simple-resources,.ton-aid-simple-assessment{padding:15px}}

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { readFileSync, existsSync } from 'node:fs';
+const read = path => readFileSync(path, 'utf8');
+const data = read('src/data/references.ts');
+const page = read('src/pages/References.tsx');
+const official = ['nasa-bm','nasa-gallery','nasa-gibs','nasa-earthdata','nasa-worldview','nasa-firms','nasa-iss'];
+const independent = ['aaber','wb-2026','wb-method','wb-space2stats'];
+for (const id of official) assert.match(data, new RegExp(`\{id:'${id}',nasaConnection:'Official NASA resource'`), `${id} must be an official NASA resource`);
+for (const id of independent) assert.match(data, new RegExp(`\{id:'${id}',nasaConnection:'Independent NASA-data research'`), `${id} must be distinguished from official NASA`);
+assert.equal((data.match(/nasaConnection:'Official NASA resource'/g) || []).length, official.length);
+assert.equal((data.match(/nasaConnection:'Independent NASA-data research'/g) || []).length, independent.length);
+assert.ok(page.indexOf('ton-nasa-refs') < page.indexOf('ton-refs-other'), 'NASA section appears first');
+assert.ok(page.includes("'All', 'NASA',"), 'NASA filter is available');
+assert.ok(page.includes('TON 618 is an independent academic prototype'), 'endorsement disclaimer visible');
+assert.ok(existsSync('public/assets/nasa-logo.jpg'), 'user-provided NASA insignia asset included');
+assert.match(read('src/App.tsx'), /path="\/references" element=\{<References \/>\}/);
+console.log('NASA references OK: 7 official + 4 independent NASA-based, featured first, accessible filter and logo.');

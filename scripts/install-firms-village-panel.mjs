@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const p=path.resolve('src/pages/Dashboard.tsx');
+if(!fs.existsSync(p))throw new Error(`Cannot find ${p}; run from TON 618 project root.`);
+const source=fs.readFileSync(p,'utf8');
+const newImport="import VillageFirmsEvidence from '../components/firms/VillageFirmsEvidence';";
+const newCard="{geographyLevel==='village' && selectedCadastre && <VillageFirmsEvidence adm3Code={getFeatureCode(selectedCadastre,'village')} />}";
+if(source.includes('VillageFirmsEvidence')){console.log('Already installed. Dashboard unchanged.');process.exit(0);}
+if(!source.includes('selectedCadastre')||!source.includes('getFeatureCode')||!source.includes('geographyLevel'))throw new Error('Unexpected Dashboard layout; no files modified. See README for manual install.');
+let changed=source;
+const bmImport="import VillageBlackMarbleEvidence from '../components/nightlights/VillageBlackMarbleEvidence';";
+if(changed.includes(bmImport))changed=changed.replace(bmImport,`${bmImport}\n${newImport}`);
+else if(/import IomEvidencePanel[^\r\n]*;/.test(changed))changed=changed.replace(/(import IomEvidencePanel[^\r\n]*;)/,`$1\n${newImport}`);
+else throw new Error('Could not find safe import anchor; no files modified.');
+const bmCard="{geographyLevel==='village' && selectedCadastre && <VillageBlackMarbleEvidence adm3Code={getFeatureCode(selectedCadastre,'village')} />}";
+const iomCard='{selectedIomMetrics && <IomEvidencePanel metrics={selectedIomMetrics}/>}';
+if(changed.includes(bmCard))changed=changed.replace(bmCard,`${bmCard}\n       ${newCard}`);
+else if(changed.includes(iomCard))changed=changed.replace(iomCard,`${iomCard}\n       ${newCard}`);
+else throw new Error('Could not find safe card anchor; no files modified.');
+if(changed===source||!changed.includes(newImport)||!changed.includes(newCard))throw new Error('No valid changes; no files modified.');
+const backup=p+'.before-firms-adm3.bak';
+if(!fs.existsSync(backup))fs.copyFileSync(p,backup);
+fs.writeFileSync(p,changed,'utf8');
+console.log('Installed NASA FIRMS village intelligence card without replacing the map, IOM, damage or Black Marble.');
+console.log('Dashboard backup: '+backup);

@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { adaptiveFactorAssessment } from '../src/lib/aidAdaptiveFormula.ts';
+const factor=(id,weight,score)=>({id,label:id,weight,score,method:'Test'});
+const all=[factor('displacement',.25,.8),factor('damage',.25,.4),factor('lights',.15,.6),factor('thermal',.10,0),factor('services',.25,.2)];
+const full=adaptiveFactorAssessment(all);
+assert.equal(full.status,'complete');
+assert.equal(full.used.length,5);
+assert.ok(Math.abs(full.observedScore-(.2+.1+.09+0+.05))<1e-10);
+assert.equal(full.completeScore,full.observedScore);
+const partial=adaptiveFactorAssessment([all[0],all[1],factor('lights',.15,null),factor('thermal',.1,0),factor('services',.25,null)]);
+assert.equal(partial.status,'partial');
+assert.equal(partial.used.length,3); // confirmed zero is not missing
+assert.equal(partial.missing.length,2);
+assert.ok(Math.abs(partial.observedWeight-.60)<1e-10);
+assert.ok(Math.abs(partial.observedScore-(.25*.8+.25*.4)/.6)<1e-10);
+assert.equal(partial.completeScore,null);
+const single=adaptiveFactorAssessment([factor('displacement',.25,null),factor('damage',.25,.7)]);
+assert.equal(single.status,'single-indicator');
+assert.equal(single.observedScore,.7);
+assert.equal(adaptiveFactorAssessment([factor('damage',.25,null)]).status,'unavailable');
+assert.equal(adaptiveFactorAssessment([factor('damage',.25,-1)]).observedScore,null);
+console.log('PASS: adaptive formula handles all, partial, confirmed-zero, single, empty, invalid.');

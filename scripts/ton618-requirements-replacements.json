@@ -1,0 +1,170 @@
+[
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "  const [damageMetric,setDamageMetric]=useState<DamageMapMetric>('affected2024');",
+    "  const [damageMetric,setDamageMetric]=useState<DamageMapMetric>('affected2024');\n  const [requirementsMetric,setRequirementsMetric]=useState<'people'|'water'|'food'>('people');",
+    "metric state"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "  const unavailable = mode === 'verified' && layer === 'requirements';",
+    "  // Requirements now uses IOM reported returnees + displaced people hosted.\n  // A missing group is not zero, and no WorldPop baseline is substituted.\n  const unavailable = false;",
+    "remove placeholder flag"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "  const villageDamageMax=Math.max(1,...villageDamageValues);",
+    "  const villageDamageMax=Math.max(1,...villageDamageValues);\n  const villageRequirements=useMemo(()=>districtCadastres.map(item=>planningGroup(item.returnees,item.hostedIdps)).filter((n):n is number=>n!==null),[districtCadastres]);\n  const requirementsFactor=requirementsMetric==='water'?450:requirementsMetric==='food'?63000:1;\n  const villageRequirementsMax=Math.max(1,...villageRequirements.map(n=>n*requirementsFactor));\n  const villageRequirementCoverage=villageRequirements.length;\n  const requirementLabel=requirementsMetric==='water'?'30-day water requirement':requirementsMetric==='food'?'30-day food energy':'IOM planning population';",
+    "village derived requirements"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "  const verifiedPopulation = mode==='verified' && layer==='population';",
+    "  const verifiedPopulation = mode==='verified' && layer==='population';\n  const verifiedRequirements = mode==='verified' && layer==='requirements';\n  function getRequirementsValue(district:string):number|null {\n    const people=planningGroup(getPopulationValue(district,'returnees'),getPopulationValue(district,'hosted'));\n    return people===null?null:people*requirementsFactor;\n  }\n  function formatRequirement(value:number|null):string {\n    if(value===null)return 'Not reported';\n    if(requirementsMetric==='water')return `${value.toLocaleString('en-US')} L / 30 days`;\n    if(requirementsMetric==='food')return `${value.toLocaleString('en-US')} kcal / 30 days`;\n    return `${value.toLocaleString('en-US')} people`;\n  }",
+    "derived requirements callbacks"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "  const damageMax=Math.max(1,...damageMetrics);",
+    "  const damageMax=Math.max(1,...damageMetrics);\n  const requirementsDistrictValues=nationalDistrictMovements.map(d=>getRequirementsValue(d.district)).filter((n):n is number=>n!==null);\n  const requirementsDistrictMax=Math.max(1,...requirementsDistrictValues);\n  const requirementsDistrictCoverage=requirementsDistrictValues.length;",
+    "district requirements max"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "    : verifiedNightlights",
+    "    : verifiedRequirements?districtView?`${requirementsDistrictCoverage}/26 districts with IOM planning-group data`:`${villageRequirementCoverage}/${districtCadastres.length} areas with IOM planning-group data`\n    : verifiedNightlights",
+    "requirements legend precedence"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "    : layer==='requirements'?'Requirements view unavailable'",
+    "    : layer==='requirements'?'Choose a 30-day planning measure'",
+    "remove stale placeholder"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "        verifiedPopulation={verifiedPopulation} verifiedDamage={verifiedDamage}",
+    "        verifiedPopulation={verifiedPopulation} verifiedDamage={verifiedDamage} verifiedRequirements={verifiedRequirements}\n        requirementsMetric={requirementsMetric} requirementsMax={villageRequirementsMax}",
+    "canvas props"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "          const damageValue=districtDamageValue(d.district,damageMetric);\n          const valueAvailable=verifiedPopulation?count!==null:verifiedDamage?damageValue!==null:true;",
+    "          const damageValue=districtDamageValue(d.district,damageMetric);\n          const requirementValue=getRequirementsValue(d.district);\n          const valueAvailable=verifiedRequirements?requirementValue!==null:verifiedPopulation?count!==null:verifiedDamage?damageValue!==null:true;",
+    "district value"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "            verifiedDamage&&damageValue!==null?(damageMetric==='cost2026South'?colorForDamageCost(damageValue):colorForDamageCount(damageValue,damageMax)):'#8ae5f5';",
+    "            verifiedDamage&&damageValue!==null?(damageMetric==='cost2026South'?colorForDamageCost(damageValue):colorForDamageCount(damageValue,damageMax)):\n            verifiedRequirements&&requirementValue!==null?colorForPopulation(requirementValue,requirementsDistrictMax):'#8ae5f5';",
+    "district fill"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "(verifiedDamage||verifiedPopulation)&&valueAvailable",
+    "(verifiedDamage||verifiedPopulation||verifiedRequirements)&&valueAvailable",
+    "district fill opacity"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "(verifiedDamage||verifiedPopulation?' ton-data-overlay':'')",
+    "(verifiedDamage||verifiedPopulation||verifiedRequirements?' ton-data-overlay':'')",
+    "district data overlay"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "<title>{verifiedPopulation?`${d.district}: ${count?.toLocaleString()??'Not reported'} \u00b7 ${populationMetricLabel}`:verifiedDamage?",
+    "<title>{verifiedRequirements?`${d.district}: ${formatRequirement(requirementValue)} \u00b7 returnees + displaced people hosted`:verifiedPopulation?`${d.district}: ${count?.toLocaleString()??'Not reported'} \u00b7 ${populationMetricLabel}`:verifiedDamage?",
+    "district tooltip"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "          const damageValue=districtDamageValue(d.district,damageMetric);\n          const dataLabel=verifiedPopulation?",
+    "          const damageValue=districtDamageValue(d.district,damageMetric);\n          const requirementValue=getRequirementsValue(d.district);\n          const dataLabel=verifiedRequirements?formatRequirement(requirementValue):verifiedPopulation?",
+    "district label data"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "+(verifiedDamage?' data-damage':verifiedPopulation?' data-pop':'')",
+    "+(verifiedDamage?' data-damage':(verifiedPopulation||verifiedRequirements)?' data-pop':'')",
+    "district label color"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "      <div className=\"map-legend-top\"><span className=\"map-legend-icon\" />{layer==='damage'?'BUILDING DAMAGE':layer==='population'?'POPULATION MOVEMENT':layer.toUpperCase()}<span>{unavailable?'UNAVAILABLE':mode==='demo'?'DEMO':'PUBLISHED'}</span></div>",
+    "      <div className=\"map-legend-top\"><span className=\"map-legend-icon\" />{layer==='requirements'?'30-DAY REQUIREMENTS':layer==='damage'?'BUILDING DAMAGE':layer==='population'?'POPULATION MOVEMENT':layer.toUpperCase()}<span>{unavailable?'UNAVAILABLE':mode==='demo'?'DEMO':verifiedRequirements?'IOM BASIS':'PUBLISHED'}</span></div>",
+    "legend header"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "      {districtView && (verifiedDamage||verifiedPopulation) && <div className=\"ton-map-evidence-count\"><strong>{verifiedDamage?damageCoverage:populationCoverage} / 26</strong>",
+    "      {districtView && (verifiedDamage||verifiedPopulation||verifiedRequirements) && <div className=\"ton-map-evidence-count\"><strong>{verifiedRequirements?requirementsDistrictCoverage:verifiedDamage?damageCoverage:populationCoverage} / 26</strong>",
+    "evidence count"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "      {verifiedPopulation && selectedCadastre && !districtView && <div className=\"ton-map-selected-metric\">",
+    "      {verifiedRequirements && !districtView && selectedCadastre && <div className=\"ton-map-selected-metric\"><strong>{selectedCadastreName}</strong> \u00b7 {(()=>{const r=safeIomMetrics(selectedCadastre,'village',iomLayers!.iom,ambiguousCodes);const p=planningGroup(r.returnees,r.hostedIdps);return p===null?'Not reported':`${formatRequirement(p*requirementsFactor)}${r.returnees===null||r.hostedIdps===null?' \u00b7 partial':' \u00b7 both groups reported'}`;})()}</div>}\n      {verifiedRequirements && districtView && selectedDistrict && <div className=\"ton-map-selected-metric\"><strong>{selectedDistrict.district}</strong> \u00b7 {formatRequirement(getRequirementsValue(selectedDistrict.district))}</div>}\n      {verifiedRequirements && <>\n        <label htmlFor=\"ton-requirements-metric\" className=\"ton-metric-label\">30-DAY PLANNING MEASURE</label>\n        <select id=\"ton-requirements-metric\" className=\"ton-map-measure\" value={requirementsMetric} onChange={e=>setRequirementsMetric(e.target.value as 'people'|'water'|'food')}>\n          <option value=\"people\">Returnees + displaced people hosted</option>\n          <option value=\"water\">Water (15 L/person/day \u00d7 30 days)</option>\n          <option value=\"food\">Food energy (2,100 kcal/person/day \u00d7 30 days)</option>\n        </select>\n        <div className=\"ton-map-gradient blue\" aria-hidden=\"true\"/><div className=\"ton-map-gradient-label\"><span>Lower planning coverage</span><span>Higher planning coverage</span></div>\n        <small>Planning benchmark for reported IOM groups, not confirmed unmet aid. One missing group means a partial count; both missing means no estimate.</small>\n      </>}\n      {verifiedPopulation && selectedCadastre && !districtView && <div className=\"ton-map-selected-metric\">",
+    "selected area requirements and selector"
+  ],
+  [
+    "src/components/map/IntelligenceMap.tsx",
+    "function clamp(n: number, lo: number, hi: number) {",
+    "// TON618_REQUIREMENTS_MAP_V1 \u2014 a reported zero is a measurement, not missing.\nfunction planningGroup(returnees:number|null|undefined,hosted:number|null|undefined):number|null {\n  const r=typeof returnees==='number'&&Number.isSafeInteger(returnees)&&returnees>=0?returnees:null;\n  const h=typeof hosted==='number'&&Number.isSafeInteger(hosted)&&hosted>=0?hosted:null;\n  return r===null&&h===null?null:(r??0)+(h??0);\n}\n\nfunction clamp(n: number, lo: number, hi: number) {",
+    "plan helper"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "  verifiedPopulation: boolean;\n  verifiedDamage: boolean;",
+    "  verifiedPopulation: boolean;\n  verifiedDamage: boolean;\n  verifiedRequirements: boolean;\n  requirementsMetric: 'people'|'water'|'food';\n  requirementsMax: number;",
+    "props requirements"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "  verifiedPopulation: boolean; verifiedDamage: boolean; satelliteLayer: Props['satelliteLayer'];",
+    "  verifiedPopulation: boolean; verifiedDamage: boolean; verifiedRequirements:boolean; requirementsMetric:Props['requirementsMetric'];requirementsMax:number;satelliteLayer: Props['satelliteLayer'];",
+    "painted requirements"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "      previous.verifiedDamage !== props.verifiedDamage || previous.satelliteLayer",
+    "      previous.verifiedDamage !== props.verifiedDamage || previous.verifiedRequirements !== props.verifiedRequirements || previous.requirementsMetric !== props.requirementsMetric || previous.requirementsMax !== props.requirementsMax || previous.satelliteLayer",
+    "canvas invalidation"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "        verifiedDamage: current.verifiedDamage, satelliteLayer: current.satelliteLayer, villageMetric: current.villageMetric, villageDamageMetric: current.villageDamageMetric,",
+    "        verifiedDamage: current.verifiedDamage, verifiedRequirements: current.verifiedRequirements, requirementsMetric:current.requirementsMetric, requirementsMax:current.requirementsMax, satelliteLayer: current.satelliteLayer, villageMetric: current.villageMetric, villageDamageMetric: current.villageDamageMetric,",
+    "painted metadata"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "        const showDamage = p.verifiedDamage && damage !== null;",
+    "        const showDamage = p.verifiedDamage && damage !== null;\n        const reportedGroup=item.returnees===null&&item.hostedIdps===null?null:(item.returnees??0)+(item.hostedIdps??0);\n        const requirementValue=reportedGroup===null?null:reportedGroup*(p.requirementsMetric==='water'?450:p.requirementsMetric==='food'?63000:1);\n        const showRequirements=p.verifiedRequirements&&requirementValue!==null;",
+    "canvas derived values"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "if (showDamage || (p.verifiedPopulation && value !== null) || showNtl || showFirms)",
+    "if (showDamage || (p.verifiedPopulation && value !== null) || showRequirements || showNtl || showFirms)",
+    "canvas drawing gate"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "          } else ctx.fillStyle=showDamage?current.damageColor(damage!, current.damageMax):current.populationColor(value!,current.populationMax);",
+    "          } else ctx.fillStyle=showRequirements?current.populationColor(requirementValue!,current.requirementsMax):showDamage?current.damageColor(damage!, current.damageMax):current.populationColor(value!,current.populationMax);",
+    "canvas fill colors"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "          ctx.globalAlpha=showNtl?(item.ntlLimited ? 0.30 : 0.60):showFirms?(item.firmsLimited ? 0.30 : 0.62):showDamage ? 0.63 : 0.46;",
+    "          ctx.globalAlpha=showNtl?(item.ntlLimited ? 0.30 : 0.60):showFirms?(item.firmsLimited ? 0.30 : 0.62):showDamage ? 0.63 : showRequirements ? (item.returnees===null||item.hostedIdps===null?0.28:0.62) : 0.46;",
+    "canvas partial transparency"
+  ],
+  [
+    "src/components/map/CadastreCanvas.tsx",
+    "    props.verifiedPopulation, props.verifiedDamage, props.satelliteLayer,",
+    "    props.verifiedPopulation, props.verifiedDamage, props.verifiedRequirements, props.requirementsMetric, props.requirementsMax, props.satelliteLayer,",
+    "canvas dependencies"
+  ]
+]

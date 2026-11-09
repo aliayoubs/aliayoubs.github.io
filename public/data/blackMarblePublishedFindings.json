@@ -1,0 +1,123 @@
+{
+  "dataset_version": "2026-11-08",
+  "title": "Published Black Marble findings for Lebanon",
+  "articles": [
+    {
+      "id": "aaber",
+      "title": "عودة مؤجلة (A Delayed Return)",
+      "author": "Amr Al-Iraqi",
+      "publisher": "Aaber",
+      "published": "2026-11-02",
+      "url": "https://aaber.net/%D8%B9%D9%88%D8%AF%D8%A9-%D9%85%D8%A4%D8%AC%D9%84%D8%A9/",
+      "sensor": "NASA Black Marble VNP46A2",
+      "period_before": "2025-09",
+      "period_after": "2026-09",
+      "method": "Median of eligible September-night observations, background subtraction of 1 nW/cm²/sr, aggregated for 376 cadastral areas in South and Nabatieh governorates, per published methodology",
+      "sample_areas": 376,
+      "precision": "Published rounded percentage changes; original per-town radiance values not released in narrative"
+    },
+    {
+      "id": "worldbank",
+      "title": "Nighttime Lights in Lebanon (2026)",
+      "publisher": "World Bank Development Data Group",
+      "last_updated": "2026-11-05",
+      "url": "https://datapartnership.org/lebanon-economic-monitor/notebooks/ntl-analysis/ntl-analysis.html",
+      "precision": "Qualitative statements only; monthly numeric values not provided on report page"
+    }
+  ],
+  "village_examples": [
+    {
+      "name": "Bint Jbeil",
+      "community_id": "bint-jbeil",
+      "change_direction": "decrease",
+      "threshold_percent": 99,
+      "comparison_operator": ">",
+      "display": "More than 99% decrease",
+      "project_study_area": true
+    },
+    {
+      "name": "Aaynata",
+      "community_id": "aynata-bint-jbeil",
+      "change_direction": "decrease",
+      "threshold_percent": 99,
+      "comparison_operator": ">",
+      "display": "More than 99% decrease",
+      "project_study_area": true
+    },
+    {
+      "name": "Kfar Tibnit",
+      "community_id": null,
+      "change_direction": "decrease",
+      "threshold_percent": 99,
+      "comparison_operator": ">",
+      "display": "More than 99% decrease",
+      "project_study_area": false
+    },
+    {
+      "name": "Khiam",
+      "community_id": null,
+      "change_direction": "decrease",
+      "percent": 76,
+      "comparison_operator": "=",
+      "display": "76% decrease",
+      "project_study_area": false
+    }
+  ],
+  "distance_bands": [
+    {
+      "id": "0-5",
+      "label": "0–5 km",
+      "distance_km_min": 0,
+      "distance_km_max": 5,
+      "change_percent": -32
+    },
+    {
+      "id": "5-10",
+      "label": "5–10 km",
+      "distance_km_min": 5,
+      "distance_km_max": 10,
+      "change_percent": -45
+    },
+    {
+      "id": "10-20",
+      "label": "10–20 km",
+      "distance_km_min": 10,
+      "distance_km_max": 20,
+      "change_percent": -23
+    },
+    {
+      "id": "20+",
+      "label": ">20 km",
+      "distance_km_min": 20,
+      "distance_km_max": null,
+      "change_percent": 3
+    }
+  ],
+  "world_bank_findings": [
+    {
+      "period": "2025 vs 2024",
+      "direction": "increase",
+      "region": "Lebanon",
+      "text": "Nighttime brightness rose nationally in 2025 compared with 2024"
+    },
+    {
+      "period": "March vs February 2026",
+      "direction": "decrease",
+      "region": "Lebanon outside Beirut",
+      "text": "The report describes a significant March 2026 decline in regions other than Beirut"
+    },
+    {
+      "period": "March vs February 2026",
+      "direction": "no_reported_drop",
+      "region": "Beirut",
+      "text": "Beirut did not show the same decline"
+    },
+    {
+      "period": "June 2025",
+      "direction": "quality_warning",
+      "region": "Lebanon",
+      "text": "An unusual spike may be a data issue, flagged for further review"
+    }
+  ],
+  "interpretation_warning": "Changes in artificial light are not direct measurements of displacement, destruction, or humanitarian need. Different methods and dates cannot be treated as one continuous series."
+}

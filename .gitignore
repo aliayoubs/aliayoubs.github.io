@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+.ton618-backups/
+exports/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+*.zip

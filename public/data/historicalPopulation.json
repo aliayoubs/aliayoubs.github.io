@@ -1,0 +1,127 @@
+{
+  "studyDistricts": [
+    {
+      "id": "bent-jbeil",
+      "population": 96200,
+      "year": "2018-2019"
+    },
+    {
+      "id": "marjaayoun",
+      "population": 74000,
+      "year": "2018-2019"
+    },
+    {
+      "id": "sour",
+      "population": 255700,
+      "year": "2018-2019"
+    }
+  ],
+  "studyVillages": [
+    {
+      "villageId": "bint-jbeil",
+      "year": "2017",
+      "winter": 4000,
+      "summer": 7000,
+      "source": "EU 2018 baseline"
+    },
+    {
+      "villageId": "aitaroun",
+      "year": "2017",
+      "winter": 6500,
+      "summer": 11000,
+      "source": "EU 2018 baseline"
+    },
+    {
+      "villageId": "aynata-bint-jbeil",
+      "year": "2017",
+      "winter": 2000,
+      "summer": 7500,
+      "source": "EU 2018 baseline"
+    },
+    {
+      "villageId": "aita-al-shaab",
+      "year": "2017",
+      "winter": 8000,
+      "summer": 10000,
+      "source": "EU 2018 baseline"
+    },
+    {
+      "villageId": "chaqra",
+      "area": "Chaqra and Doubiyeh combined",
+      "year": "2017",
+      "winter": 8000,
+      "summer": 12000,
+      "source": "EU 2018 baseline",
+      "coversVillageAlone": false
+    },
+    {
+      "villageId": "meiss-el-jabal",
+      "year": "2020",
+      "residents": 6596,
+      "source": "CityFacts/JRC GHS",
+      "modeled": true
+    },
+    {
+      "villageId": "blida",
+      "year": "2020",
+      "residents": 3312,
+      "source": "CityFacts/JRC GHS",
+      "modeled": true
+    },
+    {
+      "villageId": "taybeh-marjayoun",
+      "year": "2010",
+      "residents": 2096,
+      "source": "UN-Habitat"
+    },
+    {
+      "villageId": "kfar-kila",
+      "year": "pre-2023",
+      "residents": 5500,
+      "approximate": true,
+      "source": "Reuters / mayor"
+    },
+    {
+      "villageId": "tyre",
+      "year": "2016",
+      "winter": 60000,
+      "summer": 70000,
+      "source": "UN-Habitat Tyre City Profile",
+      "area": "Sour cadastre only"
+    },
+    {
+      "villageId": "qana",
+      "year": "2020",
+      "residents": 10633,
+      "source": "CityFacts/JRC GHS",
+      "modeled": true,
+      "area": "Qana locality, not verified cadastral-area total"
+    },
+    {
+      "villageId": "maarakeh",
+      "year": "2020",
+      "residents": 14376,
+      "source": "CityFacts/JRC GHS",
+      "modeled": true,
+      "area": "Maarakeh locality, not verified cadastral-area total"
+    },
+    {
+      "villageId": "abbassiyeh",
+      "year": "2020",
+      "residents": 19147,
+      "source": "CityFacts/JRC GHS",
+      "modeled": true,
+      "area": "Abbassiyeh locality, not verified cadastral-area total"
+    }
+  ],
+  "notes": [
+    "Historical-only, mixed sources and dates",
+    "Not an input into 2026 aid calculator",
+    "2017 Chaqra-Doubiyeh figure is combined, not Chaqra alone",
+    "2018-2019 CAS district figures are not sums of selected villages",
+    "Governorate populations intentionally omitted",
+    "Three new Sour cadastres have NO published UNDP June 2026 village-level damage percentages in the imported top-ten table.",
+    "2026 village-level IOM movements are not included in the public Round 119 snapshot; the detailed ADM3 dataset requires an access request.",
+    "2005 USAID-supported environmental impact assessment has design-population cross-checks for Qana, Maarakeh, Abbassiyeh, not actual 2025 population observations."
+  ]
+}

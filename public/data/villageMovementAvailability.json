@@ -1,0 +1,24 @@
+{
+  "asOf": "2026-11-08",
+  "publisher": "IOM DTM Lebanon",
+  "geography": "village/cadastre (ADM3)",
+  "sourcePage": "https://dtm.iom.int/component/baseline-assessment?page=1",
+  "accessStatus": "Access-request required for detailed 2026 village-level dataset",
+  "villageCountsStatus": "Not imported; do not infer values from district totals",
+  "contact": "dtmlebanon@iom.int",
+  "studyVillageIds": [
+    "bint-jbeil",
+    "aitaroun",
+    "aynata-bint-jbeil",
+    "aita-al-shaab",
+    "chaqra",
+    "meiss-el-jabal",
+    "blida",
+    "taybeh-marjayoun",
+    "kfar-kila",
+    "tyre",
+    "qana",
+    "maarakeh",
+    "abbassiyeh"
+  ]
+}

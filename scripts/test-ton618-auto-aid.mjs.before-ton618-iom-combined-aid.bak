@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {reportedMobilityPopulation,automaticResourcePlan,scoreDescription} from '../src/lib/aidAutoAssessment.ts';
+import {observedFactorScore} from '../src/lib/aidEvidenceFormula.ts';
+let r=reportedMobilityPopulation({hostedIdps:150,returnees:200});
+assert.equal(r.people,350);assert.equal(r.complete,true);assert.equal(r.isMinimum,false);
+r=reportedMobilityPopulation({hostedIdps:0,returnees:null});
+assert.equal(r.people,0);assert.equal(r.isMinimum,true);assert.equal(r.complete,false);
+r=reportedMobilityPopulation({hostedIdps:null,returnees:null});assert.equal(r.people,null);
+const a=automaticResourcePlan(2000,{hostedIdps:150,returnees:200});
+assert.equal(a.basis,'iom-reported-groups');assert.equal(a.people,350);
+assert.equal(a.waterLitres,157500);assert.equal(a.foodKcal,22050000);assert.equal(a.baselineWaterLitres,900000);
+const b=automaticResourcePlan(2000,{hostedIdps:null,returnees:null});
+assert.equal(b.basis,'worldpop-whole-baseline');assert.equal(b.people,2000);
+assert.equal(b.waterLitres,900000);
+const z=automaticResourcePlan(2000,{hostedIdps:0,returnees:0});
+assert.equal(z.basis,'worldpop-whole-baseline');assert.equal(z.people,2000);
+const missing=automaticResourcePlan(null,{hostedIdps:null,returnees:null});
+assert.equal(missing.people,null);assert.equal(missing.waterLitres,null);
+const partial=observedFactorScore([
+{id:'displacement',label:'d',score:0.5,weight:0.25,method:''},
+{id:'damage',label:'b',score:null,weight:0.25,method:''},
+{id:'lights',label:'n',score:0.3,weight:0.15,method:''},
+{id:'thermal',label:'f',score:0,weight:0.1,method:''},
+{id:'services',label:'s',score:null,weight:0.25,method:''},
+]);
+assert.equal(partial.completeScore,null);assert.equal(partial.observedWeight,0.5);
+assert(scoreDescription(partial).includes('Partial'));
+console.log('PASS: 350 reported people, 30-day requirements, WorldPop fallback, missing vs zero and incomplete severity.');
